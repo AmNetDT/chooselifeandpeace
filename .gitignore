@@ -1,2 +1,27 @@
-node_modules
-.next
+Node.js and npm
+node_modules/
+package-lock.json
+
+Next.js
+.next/
+Optional: ignore build output
+/out/
+
+IDE and editor files
+.vscode/
+.idea/
+*.iml
+
+OS-specific files
+.DS_Store
+Thumbs.db
+
+Log files
+*.log
+
+Environment variables
+*.env*
+
+Build and deployment artifacts
+build/
+dist/
