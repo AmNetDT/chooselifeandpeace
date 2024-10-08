@@ -1,35 +1,30 @@
 {
   "pages": {
-    "/_not-found/page": [
-      "static/chunks/webpack-58fcf24da912883e.js",
-      "static/chunks/fd9d1056-aa94ea5c2eabf904.js",
-      "static/chunks/117-010f5c67a96d64ec.js",
-      "static/chunks/main-app-69266983705a1729.js",
-      "static/chunks/app/_not-found/page-eaa53ae320539b27.js"
-    ],
-    "/layout": [
-      "static/chunks/webpack-58fcf24da912883e.js",
-      "static/chunks/fd9d1056-aa94ea5c2eabf904.js",
-      "static/chunks/117-010f5c67a96d64ec.js",
-      "static/chunks/main-app-69266983705a1729.js",
-      "static/css/c0006a94ee43b8fa.css",
-      "static/chunks/app/layout-e62c2e699e2079f2.js"
-    ],
     "/(root)/page": [
-      "static/chunks/webpack-58fcf24da912883e.js",
-      "static/chunks/fd9d1056-aa94ea5c2eabf904.js",
-      "static/chunks/117-010f5c67a96d64ec.js",
-      "static/chunks/main-app-69266983705a1729.js",
-      "static/chunks/609-d342a0b3f02dc546.js",
-      "static/chunks/app/(root)/page-871476162579a726.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(root)/page.js"
     ],
     "/(root)/layout": [
-      "static/chunks/webpack-58fcf24da912883e.js",
-      "static/chunks/fd9d1056-aa94ea5c2eabf904.js",
-      "static/chunks/117-010f5c67a96d64ec.js",
-      "static/chunks/main-app-69266983705a1729.js",
-      "static/chunks/609-d342a0b3f02dc546.js",
-      "static/chunks/app/(root)/layout-70b93a340b618f6c.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(root)/layout.js"
+    ],
+    "/layout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/layout.css",
+      "static/chunks/app/layout.js"
+    ],
+    "/(auth)/sign-in/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(auth)/sign-in/page.js"
+    ],
+    "/(auth)/layout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(auth)/layout.js"
     ]
   }
 }
