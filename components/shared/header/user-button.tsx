@@ -24,7 +24,7 @@ export default async function UserButton() {
         <DropdownMenuTrigger asChild>
           <div className="flex items-center">
             <Button
-              //variant="ghost"
+              variant="ghost"
               className="relative w-8 h-8 rounded-full ml-2"
             >
               {session.user.name}
@@ -47,7 +47,7 @@ export default async function UserButton() {
             <form action={SignOut} className="w-full">
               <Button
                 className="w-full py-4 px-2 h-4 justify-start"
-                //variant="ghost"
+                variant="ghost"
               >
                 Sign Out
               </Button>
