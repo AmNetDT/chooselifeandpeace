@@ -3,8 +3,8 @@ import './globals.css'
 
 import { Poppins as FontSans } from 'next/font/google'
 import { cn } from '@/lib/utils'
-// import { Toaster } from '@/components/ui/toaster'
 import React from 'react'
+import { Toaster } from '@/components/ui/toaster'
 // import { ThemeProvider } from '@/components/shared/theme-provider'
 // import { APP_DESCRIPTION, APP_NAME } from '@/lib/constants'
 
@@ -39,8 +39,8 @@ export default function RootLayout({
           disableTransitionOnChange
         > */}
         {children}
-        {/* <Toaster />
-        </ThemeProvider> */}
+        <Toaster />
+        {/* </ThemeProvider> */}
       </body>
     </html>
   )
