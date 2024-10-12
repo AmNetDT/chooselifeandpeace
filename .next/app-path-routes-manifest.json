@@ -1,0 +1,1 @@
+{"/_not-found/page":"/_not-found","/api/auth/[...nextauth]/route":"/api/auth/[...nextauth]","/(root)/page":"/","/(root)/product/[slug]/page":"/product/[slug]","/(auth)/sign-up/page":"/sign-up","/(root)/cart/page":"/cart","/(root)/payment-method/page":"/payment-method","/(auth)/sign-in/page":"/sign-in","/(root)/shipping-address/page":"/shipping-address"}
