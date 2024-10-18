@@ -1,0 +1,1 @@
+{"version":1,"functions":{"/api/auth/[...nextauth]":{},"/cart":{},"/sign-in":{},"/payment-method":{},"/order/[id]":{},"/sign-up":{},"/shipping-address":{},"/place-order":{}}}
