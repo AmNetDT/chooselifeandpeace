@@ -3,6 +3,8 @@ export const APP_NAME =
 export const APP_DESCRIPTION =
   process.env.NEXT_PUBLIC_APP_DESCRIPTION || 'Fashion & Clothing'
 
+export const PAGE_SIZE = Number(process.env.PAGE_SIZE) || 3
+
 export const PAYMENT_METHODS = process.env.PAYMENT_METHODS
   ? process.env.PAYMENT_METHODS.split(', ')
   : ['PayPal', 'Stripe']
