@@ -7,6 +7,7 @@ import React from 'react'
 import { Toaster } from '@/components/ui/toaster'
 import { ThemeProvider } from '@/components/shared/theme-provider'
 import { APP_DESCRIPTION, APP_NAME } from '@/lib/constants'
+import ScrollToTop from '@/components/shared/scrolltotop'
 
 const fontSans = FontSans({
   subsets: ['latin'],
@@ -40,6 +41,7 @@ export default function RootLayout({
         >
           {children}
           <Toaster />
+          <ScrollToTop />
         </ThemeProvider>
       </body>
     </html>

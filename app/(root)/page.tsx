@@ -6,6 +6,8 @@ export default async function Home() {
   return (
     <div className="space-y-8">
       <ProductList title="SELECTED FOR YOU" data={latestProducts} />
+
+      <ProductList title="OTHER PRODUCTS" data={latestProducts} />
     </div>
   )
 }
