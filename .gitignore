@@ -2,7 +2,7 @@ Node.js and npm
 node_modules/
 package-lock.json
 
-.next/
+
 Next.js
 
 Optional: ignore build output
