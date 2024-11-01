@@ -1,3 +1,5 @@
 {
-  "/(root)/page": "app/(root)/page.js"
+  "/(root)/page": "app/(root)/page.js",
+  "/(auth)/sign-in/page": "app/(auth)/sign-in/page.js",
+  "/(root)/cart/page": "app/(root)/cart/page.js"
 }

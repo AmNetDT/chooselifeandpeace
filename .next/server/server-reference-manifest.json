@@ -2,109 +2,151 @@
   "node": {
     "37248d5a5d92203bea071298526bbf56bd6a282e": {
       "workers": {
-        "app/(root)/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fuser.actions.ts%22%2C%5B%22updateProfile%22%2C%22getUserById%22%2C%22SignOut%22%2C%22updateUserAddress%22%2C%22%24%24ACTION_0%22%2C%22updateUserPaymentMethod%22%2C%22signUp%22%2C%22signInWithCredentials%22%5D%5D%2C%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fcart.actions.ts%22%2C%5B%22addItemToCart%22%2C%22%24%24ACTION_1%22%2C%22%24%24ACTION_0%22%2C%22removeItemFromCart%22%2C%22getMyCart%22%5D%5D%5D&__client_imported__=!"
+        "app/(root)/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fuser.actions.ts%22%2C%5B%22updateProfile%22%2C%22getUserById%22%2C%22SignOut%22%2C%22updateUserAddress%22%2C%22%24%24ACTION_0%22%2C%22updateUserPaymentMethod%22%2C%22signUp%22%2C%22signInWithCredentials%22%5D%5D%2C%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fcart.actions.ts%22%2C%5B%22addItemToCart%22%2C%22%24%24ACTION_1%22%2C%22%24%24ACTION_0%22%2C%22removeItemFromCart%22%2C%22getMyCart%22%5D%5D%5D&__client_imported__=!",
+        "app/(auth)/sign-in/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fuser.actions.ts%22%2C%5B%22updateProfile%22%2C%22getUserById%22%2C%22SignOut%22%2C%22updateUserAddress%22%2C%22%24%24ACTION_0%22%2C%22updateUserPaymentMethod%22%2C%22signUp%22%2C%22signInWithCredentials%22%5D%5D%5D&__client_imported__=true!",
+        "app/(root)/cart/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fcart.actions.ts%22%2C%5B%22addItemToCart%22%2C%22%24%24ACTION_1%22%2C%22%24%24ACTION_0%22%2C%22removeItemFromCart%22%2C%22getMyCart%22%5D%5D%2C%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fuser.actions.ts%22%2C%5B%22updateProfile%22%2C%22getUserById%22%2C%22SignOut%22%2C%22updateUserAddress%22%2C%22%24%24ACTION_0%22%2C%22updateUserPaymentMethod%22%2C%22signUp%22%2C%22signInWithCredentials%22%5D%5D%5D&__client_imported__=!"
       },
       "layer": {
-        "app/(root)/page": "rsc"
+        "app/(root)/page": "rsc",
+        "app/(auth)/sign-in/page": "action-browser",
+        "app/(root)/cart/page": "rsc"
       }
     },
     "4896ea1b4f1dace1ade49eb3651161dc0c4f102a": {
       "workers": {
-        "app/(root)/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fuser.actions.ts%22%2C%5B%22updateProfile%22%2C%22getUserById%22%2C%22SignOut%22%2C%22updateUserAddress%22%2C%22%24%24ACTION_0%22%2C%22updateUserPaymentMethod%22%2C%22signUp%22%2C%22signInWithCredentials%22%5D%5D%2C%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fcart.actions.ts%22%2C%5B%22addItemToCart%22%2C%22%24%24ACTION_1%22%2C%22%24%24ACTION_0%22%2C%22removeItemFromCart%22%2C%22getMyCart%22%5D%5D%5D&__client_imported__=!"
+        "app/(root)/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fuser.actions.ts%22%2C%5B%22updateProfile%22%2C%22getUserById%22%2C%22SignOut%22%2C%22updateUserAddress%22%2C%22%24%24ACTION_0%22%2C%22updateUserPaymentMethod%22%2C%22signUp%22%2C%22signInWithCredentials%22%5D%5D%2C%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fcart.actions.ts%22%2C%5B%22addItemToCart%22%2C%22%24%24ACTION_1%22%2C%22%24%24ACTION_0%22%2C%22removeItemFromCart%22%2C%22getMyCart%22%5D%5D%5D&__client_imported__=!",
+        "app/(auth)/sign-in/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fuser.actions.ts%22%2C%5B%22updateProfile%22%2C%22getUserById%22%2C%22SignOut%22%2C%22updateUserAddress%22%2C%22%24%24ACTION_0%22%2C%22updateUserPaymentMethod%22%2C%22signUp%22%2C%22signInWithCredentials%22%5D%5D%5D&__client_imported__=true!",
+        "app/(root)/cart/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fcart.actions.ts%22%2C%5B%22addItemToCart%22%2C%22%24%24ACTION_1%22%2C%22%24%24ACTION_0%22%2C%22removeItemFromCart%22%2C%22getMyCart%22%5D%5D%2C%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fuser.actions.ts%22%2C%5B%22updateProfile%22%2C%22getUserById%22%2C%22SignOut%22%2C%22updateUserAddress%22%2C%22%24%24ACTION_0%22%2C%22updateUserPaymentMethod%22%2C%22signUp%22%2C%22signInWithCredentials%22%5D%5D%5D&__client_imported__=!"
       },
       "layer": {
-        "app/(root)/page": "rsc"
+        "app/(root)/page": "rsc",
+        "app/(auth)/sign-in/page": "action-browser",
+        "app/(root)/cart/page": "rsc"
       }
     },
     "6f62a9caef1528e29ef4461e98a41e80f8b1eae5": {
       "workers": {
-        "app/(root)/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fuser.actions.ts%22%2C%5B%22updateProfile%22%2C%22getUserById%22%2C%22SignOut%22%2C%22updateUserAddress%22%2C%22%24%24ACTION_0%22%2C%22updateUserPaymentMethod%22%2C%22signUp%22%2C%22signInWithCredentials%22%5D%5D%2C%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fcart.actions.ts%22%2C%5B%22addItemToCart%22%2C%22%24%24ACTION_1%22%2C%22%24%24ACTION_0%22%2C%22removeItemFromCart%22%2C%22getMyCart%22%5D%5D%5D&__client_imported__=!"
+        "app/(root)/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fuser.actions.ts%22%2C%5B%22updateProfile%22%2C%22getUserById%22%2C%22SignOut%22%2C%22updateUserAddress%22%2C%22%24%24ACTION_0%22%2C%22updateUserPaymentMethod%22%2C%22signUp%22%2C%22signInWithCredentials%22%5D%5D%2C%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fcart.actions.ts%22%2C%5B%22addItemToCart%22%2C%22%24%24ACTION_1%22%2C%22%24%24ACTION_0%22%2C%22removeItemFromCart%22%2C%22getMyCart%22%5D%5D%5D&__client_imported__=!",
+        "app/(auth)/sign-in/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fuser.actions.ts%22%2C%5B%22updateProfile%22%2C%22getUserById%22%2C%22SignOut%22%2C%22updateUserAddress%22%2C%22%24%24ACTION_0%22%2C%22updateUserPaymentMethod%22%2C%22signUp%22%2C%22signInWithCredentials%22%5D%5D%5D&__client_imported__=true!",
+        "app/(root)/cart/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fcart.actions.ts%22%2C%5B%22addItemToCart%22%2C%22%24%24ACTION_1%22%2C%22%24%24ACTION_0%22%2C%22removeItemFromCart%22%2C%22getMyCart%22%5D%5D%2C%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fuser.actions.ts%22%2C%5B%22updateProfile%22%2C%22getUserById%22%2C%22SignOut%22%2C%22updateUserAddress%22%2C%22%24%24ACTION_0%22%2C%22updateUserPaymentMethod%22%2C%22signUp%22%2C%22signInWithCredentials%22%5D%5D%5D&__client_imported__=!"
       },
       "layer": {
-        "app/(root)/page": "rsc"
+        "app/(root)/page": "rsc",
+        "app/(auth)/sign-in/page": "action-browser",
+        "app/(root)/cart/page": "rsc"
       }
     },
     "7ef6945e100c99ebbac8da6a81410b4410597f01": {
       "workers": {
-        "app/(root)/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fuser.actions.ts%22%2C%5B%22updateProfile%22%2C%22getUserById%22%2C%22SignOut%22%2C%22updateUserAddress%22%2C%22%24%24ACTION_0%22%2C%22updateUserPaymentMethod%22%2C%22signUp%22%2C%22signInWithCredentials%22%5D%5D%2C%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fcart.actions.ts%22%2C%5B%22addItemToCart%22%2C%22%24%24ACTION_1%22%2C%22%24%24ACTION_0%22%2C%22removeItemFromCart%22%2C%22getMyCart%22%5D%5D%5D&__client_imported__=!"
+        "app/(root)/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fuser.actions.ts%22%2C%5B%22updateProfile%22%2C%22getUserById%22%2C%22SignOut%22%2C%22updateUserAddress%22%2C%22%24%24ACTION_0%22%2C%22updateUserPaymentMethod%22%2C%22signUp%22%2C%22signInWithCredentials%22%5D%5D%2C%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fcart.actions.ts%22%2C%5B%22addItemToCart%22%2C%22%24%24ACTION_1%22%2C%22%24%24ACTION_0%22%2C%22removeItemFromCart%22%2C%22getMyCart%22%5D%5D%5D&__client_imported__=!",
+        "app/(auth)/sign-in/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fuser.actions.ts%22%2C%5B%22updateProfile%22%2C%22getUserById%22%2C%22SignOut%22%2C%22updateUserAddress%22%2C%22%24%24ACTION_0%22%2C%22updateUserPaymentMethod%22%2C%22signUp%22%2C%22signInWithCredentials%22%5D%5D%5D&__client_imported__=true!",
+        "app/(root)/cart/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fcart.actions.ts%22%2C%5B%22addItemToCart%22%2C%22%24%24ACTION_1%22%2C%22%24%24ACTION_0%22%2C%22removeItemFromCart%22%2C%22getMyCart%22%5D%5D%2C%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fuser.actions.ts%22%2C%5B%22updateProfile%22%2C%22getUserById%22%2C%22SignOut%22%2C%22updateUserAddress%22%2C%22%24%24ACTION_0%22%2C%22updateUserPaymentMethod%22%2C%22signUp%22%2C%22signInWithCredentials%22%5D%5D%5D&__client_imported__=!"
       },
       "layer": {
-        "app/(root)/page": "rsc"
+        "app/(root)/page": "rsc",
+        "app/(auth)/sign-in/page": "action-browser",
+        "app/(root)/cart/page": "rsc"
       }
     },
     "9894e6c57f99a2f4eccac4a43c9c453c2e8680a4": {
       "workers": {
-        "app/(root)/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fuser.actions.ts%22%2C%5B%22updateProfile%22%2C%22getUserById%22%2C%22SignOut%22%2C%22updateUserAddress%22%2C%22%24%24ACTION_0%22%2C%22updateUserPaymentMethod%22%2C%22signUp%22%2C%22signInWithCredentials%22%5D%5D%2C%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fcart.actions.ts%22%2C%5B%22addItemToCart%22%2C%22%24%24ACTION_1%22%2C%22%24%24ACTION_0%22%2C%22removeItemFromCart%22%2C%22getMyCart%22%5D%5D%5D&__client_imported__=!"
+        "app/(root)/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fuser.actions.ts%22%2C%5B%22updateProfile%22%2C%22getUserById%22%2C%22SignOut%22%2C%22updateUserAddress%22%2C%22%24%24ACTION_0%22%2C%22updateUserPaymentMethod%22%2C%22signUp%22%2C%22signInWithCredentials%22%5D%5D%2C%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fcart.actions.ts%22%2C%5B%22addItemToCart%22%2C%22%24%24ACTION_1%22%2C%22%24%24ACTION_0%22%2C%22removeItemFromCart%22%2C%22getMyCart%22%5D%5D%5D&__client_imported__=!",
+        "app/(auth)/sign-in/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fuser.actions.ts%22%2C%5B%22updateProfile%22%2C%22getUserById%22%2C%22SignOut%22%2C%22updateUserAddress%22%2C%22%24%24ACTION_0%22%2C%22updateUserPaymentMethod%22%2C%22signUp%22%2C%22signInWithCredentials%22%5D%5D%5D&__client_imported__=true!",
+        "app/(root)/cart/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fcart.actions.ts%22%2C%5B%22addItemToCart%22%2C%22%24%24ACTION_1%22%2C%22%24%24ACTION_0%22%2C%22removeItemFromCart%22%2C%22getMyCart%22%5D%5D%2C%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fuser.actions.ts%22%2C%5B%22updateProfile%22%2C%22getUserById%22%2C%22SignOut%22%2C%22updateUserAddress%22%2C%22%24%24ACTION_0%22%2C%22updateUserPaymentMethod%22%2C%22signUp%22%2C%22signInWithCredentials%22%5D%5D%5D&__client_imported__=!"
       },
       "layer": {
-        "app/(root)/page": "rsc"
+        "app/(root)/page": "rsc",
+        "app/(auth)/sign-in/page": "action-browser",
+        "app/(root)/cart/page": "rsc"
       }
     },
     "abc73778e07b95e9d8f15868fea7f03dbbca9e71": {
       "workers": {
-        "app/(root)/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fuser.actions.ts%22%2C%5B%22updateProfile%22%2C%22getUserById%22%2C%22SignOut%22%2C%22updateUserAddress%22%2C%22%24%24ACTION_0%22%2C%22updateUserPaymentMethod%22%2C%22signUp%22%2C%22signInWithCredentials%22%5D%5D%2C%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fcart.actions.ts%22%2C%5B%22addItemToCart%22%2C%22%24%24ACTION_1%22%2C%22%24%24ACTION_0%22%2C%22removeItemFromCart%22%2C%22getMyCart%22%5D%5D%5D&__client_imported__=!"
+        "app/(root)/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fuser.actions.ts%22%2C%5B%22updateProfile%22%2C%22getUserById%22%2C%22SignOut%22%2C%22updateUserAddress%22%2C%22%24%24ACTION_0%22%2C%22updateUserPaymentMethod%22%2C%22signUp%22%2C%22signInWithCredentials%22%5D%5D%2C%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fcart.actions.ts%22%2C%5B%22addItemToCart%22%2C%22%24%24ACTION_1%22%2C%22%24%24ACTION_0%22%2C%22removeItemFromCart%22%2C%22getMyCart%22%5D%5D%5D&__client_imported__=!",
+        "app/(auth)/sign-in/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fuser.actions.ts%22%2C%5B%22updateProfile%22%2C%22getUserById%22%2C%22SignOut%22%2C%22updateUserAddress%22%2C%22%24%24ACTION_0%22%2C%22updateUserPaymentMethod%22%2C%22signUp%22%2C%22signInWithCredentials%22%5D%5D%5D&__client_imported__=true!",
+        "app/(root)/cart/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fcart.actions.ts%22%2C%5B%22addItemToCart%22%2C%22%24%24ACTION_1%22%2C%22%24%24ACTION_0%22%2C%22removeItemFromCart%22%2C%22getMyCart%22%5D%5D%2C%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fuser.actions.ts%22%2C%5B%22updateProfile%22%2C%22getUserById%22%2C%22SignOut%22%2C%22updateUserAddress%22%2C%22%24%24ACTION_0%22%2C%22updateUserPaymentMethod%22%2C%22signUp%22%2C%22signInWithCredentials%22%5D%5D%5D&__client_imported__=!"
       },
       "layer": {
-        "app/(root)/page": "rsc"
+        "app/(root)/page": "rsc",
+        "app/(auth)/sign-in/page": "action-browser",
+        "app/(root)/cart/page": "rsc"
       }
     },
     "be840f0dc3afac8b8d0c6b02dc3328bacb294db1": {
       "workers": {
-        "app/(root)/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fuser.actions.ts%22%2C%5B%22updateProfile%22%2C%22getUserById%22%2C%22SignOut%22%2C%22updateUserAddress%22%2C%22%24%24ACTION_0%22%2C%22updateUserPaymentMethod%22%2C%22signUp%22%2C%22signInWithCredentials%22%5D%5D%2C%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fcart.actions.ts%22%2C%5B%22addItemToCart%22%2C%22%24%24ACTION_1%22%2C%22%24%24ACTION_0%22%2C%22removeItemFromCart%22%2C%22getMyCart%22%5D%5D%5D&__client_imported__=!"
+        "app/(root)/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fuser.actions.ts%22%2C%5B%22updateProfile%22%2C%22getUserById%22%2C%22SignOut%22%2C%22updateUserAddress%22%2C%22%24%24ACTION_0%22%2C%22updateUserPaymentMethod%22%2C%22signUp%22%2C%22signInWithCredentials%22%5D%5D%2C%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fcart.actions.ts%22%2C%5B%22addItemToCart%22%2C%22%24%24ACTION_1%22%2C%22%24%24ACTION_0%22%2C%22removeItemFromCart%22%2C%22getMyCart%22%5D%5D%5D&__client_imported__=!",
+        "app/(auth)/sign-in/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fuser.actions.ts%22%2C%5B%22updateProfile%22%2C%22getUserById%22%2C%22SignOut%22%2C%22updateUserAddress%22%2C%22%24%24ACTION_0%22%2C%22updateUserPaymentMethod%22%2C%22signUp%22%2C%22signInWithCredentials%22%5D%5D%5D&__client_imported__=true!",
+        "app/(root)/cart/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fcart.actions.ts%22%2C%5B%22addItemToCart%22%2C%22%24%24ACTION_1%22%2C%22%24%24ACTION_0%22%2C%22removeItemFromCart%22%2C%22getMyCart%22%5D%5D%2C%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fuser.actions.ts%22%2C%5B%22updateProfile%22%2C%22getUserById%22%2C%22SignOut%22%2C%22updateUserAddress%22%2C%22%24%24ACTION_0%22%2C%22updateUserPaymentMethod%22%2C%22signUp%22%2C%22signInWithCredentials%22%5D%5D%5D&__client_imported__=!"
       },
       "layer": {
-        "app/(root)/page": "rsc"
+        "app/(root)/page": "rsc",
+        "app/(auth)/sign-in/page": "action-browser",
+        "app/(root)/cart/page": "rsc"
       }
     },
     "c90075d8792b89f7584984a67b421aab69e556af": {
       "workers": {
-        "app/(root)/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fuser.actions.ts%22%2C%5B%22updateProfile%22%2C%22getUserById%22%2C%22SignOut%22%2C%22updateUserAddress%22%2C%22%24%24ACTION_0%22%2C%22updateUserPaymentMethod%22%2C%22signUp%22%2C%22signInWithCredentials%22%5D%5D%2C%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fcart.actions.ts%22%2C%5B%22addItemToCart%22%2C%22%24%24ACTION_1%22%2C%22%24%24ACTION_0%22%2C%22removeItemFromCart%22%2C%22getMyCart%22%5D%5D%5D&__client_imported__=!"
+        "app/(root)/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fuser.actions.ts%22%2C%5B%22updateProfile%22%2C%22getUserById%22%2C%22SignOut%22%2C%22updateUserAddress%22%2C%22%24%24ACTION_0%22%2C%22updateUserPaymentMethod%22%2C%22signUp%22%2C%22signInWithCredentials%22%5D%5D%2C%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fcart.actions.ts%22%2C%5B%22addItemToCart%22%2C%22%24%24ACTION_1%22%2C%22%24%24ACTION_0%22%2C%22removeItemFromCart%22%2C%22getMyCart%22%5D%5D%5D&__client_imported__=!",
+        "app/(auth)/sign-in/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fuser.actions.ts%22%2C%5B%22updateProfile%22%2C%22getUserById%22%2C%22SignOut%22%2C%22updateUserAddress%22%2C%22%24%24ACTION_0%22%2C%22updateUserPaymentMethod%22%2C%22signUp%22%2C%22signInWithCredentials%22%5D%5D%5D&__client_imported__=true!",
+        "app/(root)/cart/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fcart.actions.ts%22%2C%5B%22addItemToCart%22%2C%22%24%24ACTION_1%22%2C%22%24%24ACTION_0%22%2C%22removeItemFromCart%22%2C%22getMyCart%22%5D%5D%2C%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fuser.actions.ts%22%2C%5B%22updateProfile%22%2C%22getUserById%22%2C%22SignOut%22%2C%22updateUserAddress%22%2C%22%24%24ACTION_0%22%2C%22updateUserPaymentMethod%22%2C%22signUp%22%2C%22signInWithCredentials%22%5D%5D%5D&__client_imported__=!"
       },
       "layer": {
-        "app/(root)/page": "rsc"
+        "app/(root)/page": "rsc",
+        "app/(auth)/sign-in/page": "action-browser",
+        "app/(root)/cart/page": "rsc"
       }
     },
     "41fc677b184effcb0016e001cd930a9fb30ddb0a": {
       "workers": {
-        "app/(root)/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fuser.actions.ts%22%2C%5B%22updateProfile%22%2C%22getUserById%22%2C%22SignOut%22%2C%22updateUserAddress%22%2C%22%24%24ACTION_0%22%2C%22updateUserPaymentMethod%22%2C%22signUp%22%2C%22signInWithCredentials%22%5D%5D%2C%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fcart.actions.ts%22%2C%5B%22addItemToCart%22%2C%22%24%24ACTION_1%22%2C%22%24%24ACTION_0%22%2C%22removeItemFromCart%22%2C%22getMyCart%22%5D%5D%5D&__client_imported__=!"
+        "app/(root)/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fuser.actions.ts%22%2C%5B%22updateProfile%22%2C%22getUserById%22%2C%22SignOut%22%2C%22updateUserAddress%22%2C%22%24%24ACTION_0%22%2C%22updateUserPaymentMethod%22%2C%22signUp%22%2C%22signInWithCredentials%22%5D%5D%2C%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fcart.actions.ts%22%2C%5B%22addItemToCart%22%2C%22%24%24ACTION_1%22%2C%22%24%24ACTION_0%22%2C%22removeItemFromCart%22%2C%22getMyCart%22%5D%5D%5D&__client_imported__=!",
+        "app/(root)/cart/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fcart.actions.ts%22%2C%5B%22addItemToCart%22%2C%22%24%24ACTION_1%22%2C%22%24%24ACTION_0%22%2C%22removeItemFromCart%22%2C%22getMyCart%22%5D%5D%2C%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fuser.actions.ts%22%2C%5B%22updateProfile%22%2C%22getUserById%22%2C%22SignOut%22%2C%22updateUserAddress%22%2C%22%24%24ACTION_0%22%2C%22updateUserPaymentMethod%22%2C%22signUp%22%2C%22signInWithCredentials%22%5D%5D%5D&__client_imported__=!"
       },
       "layer": {
-        "app/(root)/page": "rsc"
+        "app/(root)/page": "rsc",
+        "app/(root)/cart/page": "rsc"
       }
     },
     "9ca5872de79006ed19093a5fb9a9561bb840e13b": {
       "workers": {
-        "app/(root)/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fuser.actions.ts%22%2C%5B%22updateProfile%22%2C%22getUserById%22%2C%22SignOut%22%2C%22updateUserAddress%22%2C%22%24%24ACTION_0%22%2C%22updateUserPaymentMethod%22%2C%22signUp%22%2C%22signInWithCredentials%22%5D%5D%2C%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fcart.actions.ts%22%2C%5B%22addItemToCart%22%2C%22%24%24ACTION_1%22%2C%22%24%24ACTION_0%22%2C%22removeItemFromCart%22%2C%22getMyCart%22%5D%5D%5D&__client_imported__=!"
+        "app/(root)/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fuser.actions.ts%22%2C%5B%22updateProfile%22%2C%22getUserById%22%2C%22SignOut%22%2C%22updateUserAddress%22%2C%22%24%24ACTION_0%22%2C%22updateUserPaymentMethod%22%2C%22signUp%22%2C%22signInWithCredentials%22%5D%5D%2C%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fcart.actions.ts%22%2C%5B%22addItemToCart%22%2C%22%24%24ACTION_1%22%2C%22%24%24ACTION_0%22%2C%22removeItemFromCart%22%2C%22getMyCart%22%5D%5D%5D&__client_imported__=!",
+        "app/(root)/cart/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fcart.actions.ts%22%2C%5B%22addItemToCart%22%2C%22%24%24ACTION_1%22%2C%22%24%24ACTION_0%22%2C%22removeItemFromCart%22%2C%22getMyCart%22%5D%5D%2C%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fuser.actions.ts%22%2C%5B%22updateProfile%22%2C%22getUserById%22%2C%22SignOut%22%2C%22updateUserAddress%22%2C%22%24%24ACTION_0%22%2C%22updateUserPaymentMethod%22%2C%22signUp%22%2C%22signInWithCredentials%22%5D%5D%5D&__client_imported__=!"
       },
       "layer": {
-        "app/(root)/page": "rsc"
+        "app/(root)/page": "rsc",
+        "app/(root)/cart/page": "rsc"
       }
     },
     "d2d3db1dd1f5ae5ad5053f8ad3bc0f2da4d94473": {
       "workers": {
-        "app/(root)/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fuser.actions.ts%22%2C%5B%22updateProfile%22%2C%22getUserById%22%2C%22SignOut%22%2C%22updateUserAddress%22%2C%22%24%24ACTION_0%22%2C%22updateUserPaymentMethod%22%2C%22signUp%22%2C%22signInWithCredentials%22%5D%5D%2C%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fcart.actions.ts%22%2C%5B%22addItemToCart%22%2C%22%24%24ACTION_1%22%2C%22%24%24ACTION_0%22%2C%22removeItemFromCart%22%2C%22getMyCart%22%5D%5D%5D&__client_imported__=!"
+        "app/(root)/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fuser.actions.ts%22%2C%5B%22updateProfile%22%2C%22getUserById%22%2C%22SignOut%22%2C%22updateUserAddress%22%2C%22%24%24ACTION_0%22%2C%22updateUserPaymentMethod%22%2C%22signUp%22%2C%22signInWithCredentials%22%5D%5D%2C%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fcart.actions.ts%22%2C%5B%22addItemToCart%22%2C%22%24%24ACTION_1%22%2C%22%24%24ACTION_0%22%2C%22removeItemFromCart%22%2C%22getMyCart%22%5D%5D%5D&__client_imported__=!",
+        "app/(root)/cart/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fcart.actions.ts%22%2C%5B%22addItemToCart%22%2C%22%24%24ACTION_1%22%2C%22%24%24ACTION_0%22%2C%22removeItemFromCart%22%2C%22getMyCart%22%5D%5D%2C%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fuser.actions.ts%22%2C%5B%22updateProfile%22%2C%22getUserById%22%2C%22SignOut%22%2C%22updateUserAddress%22%2C%22%24%24ACTION_0%22%2C%22updateUserPaymentMethod%22%2C%22signUp%22%2C%22signInWithCredentials%22%5D%5D%5D&__client_imported__=!"
       },
       "layer": {
-        "app/(root)/page": "rsc"
+        "app/(root)/page": "rsc",
+        "app/(root)/cart/page": "rsc"
       }
     },
     "d33ae3afc17ff86a896b65bbc01c77b3fd04f032": {
       "workers": {
-        "app/(root)/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fuser.actions.ts%22%2C%5B%22updateProfile%22%2C%22getUserById%22%2C%22SignOut%22%2C%22updateUserAddress%22%2C%22%24%24ACTION_0%22%2C%22updateUserPaymentMethod%22%2C%22signUp%22%2C%22signInWithCredentials%22%5D%5D%2C%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fcart.actions.ts%22%2C%5B%22addItemToCart%22%2C%22%24%24ACTION_1%22%2C%22%24%24ACTION_0%22%2C%22removeItemFromCart%22%2C%22getMyCart%22%5D%5D%5D&__client_imported__=!"
+        "app/(root)/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fuser.actions.ts%22%2C%5B%22updateProfile%22%2C%22getUserById%22%2C%22SignOut%22%2C%22updateUserAddress%22%2C%22%24%24ACTION_0%22%2C%22updateUserPaymentMethod%22%2C%22signUp%22%2C%22signInWithCredentials%22%5D%5D%2C%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fcart.actions.ts%22%2C%5B%22addItemToCart%22%2C%22%24%24ACTION_1%22%2C%22%24%24ACTION_0%22%2C%22removeItemFromCart%22%2C%22getMyCart%22%5D%5D%5D&__client_imported__=!",
+        "app/(root)/cart/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fcart.actions.ts%22%2C%5B%22addItemToCart%22%2C%22%24%24ACTION_1%22%2C%22%24%24ACTION_0%22%2C%22removeItemFromCart%22%2C%22getMyCart%22%5D%5D%2C%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fuser.actions.ts%22%2C%5B%22updateProfile%22%2C%22getUserById%22%2C%22SignOut%22%2C%22updateUserAddress%22%2C%22%24%24ACTION_0%22%2C%22updateUserPaymentMethod%22%2C%22signUp%22%2C%22signInWithCredentials%22%5D%5D%5D&__client_imported__=!"
       },
       "layer": {
-        "app/(root)/page": "rsc"
+        "app/(root)/page": "rsc",
+        "app/(root)/cart/page": "rsc"
       }
     },
     "fe554d431ad4dbdcf2b2dc0e821c8d0adcf5a00c": {
       "workers": {
-        "app/(root)/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fuser.actions.ts%22%2C%5B%22updateProfile%22%2C%22getUserById%22%2C%22SignOut%22%2C%22updateUserAddress%22%2C%22%24%24ACTION_0%22%2C%22updateUserPaymentMethod%22%2C%22signUp%22%2C%22signInWithCredentials%22%5D%5D%2C%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fcart.actions.ts%22%2C%5B%22addItemToCart%22%2C%22%24%24ACTION_1%22%2C%22%24%24ACTION_0%22%2C%22removeItemFromCart%22%2C%22getMyCart%22%5D%5D%5D&__client_imported__=!"
+        "app/(root)/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fuser.actions.ts%22%2C%5B%22updateProfile%22%2C%22getUserById%22%2C%22SignOut%22%2C%22updateUserAddress%22%2C%22%24%24ACTION_0%22%2C%22updateUserPaymentMethod%22%2C%22signUp%22%2C%22signInWithCredentials%22%5D%5D%2C%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fcart.actions.ts%22%2C%5B%22addItemToCart%22%2C%22%24%24ACTION_1%22%2C%22%24%24ACTION_0%22%2C%22removeItemFromCart%22%2C%22getMyCart%22%5D%5D%5D&__client_imported__=!",
+        "app/(root)/cart/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fcart.actions.ts%22%2C%5B%22addItemToCart%22%2C%22%24%24ACTION_1%22%2C%22%24%24ACTION_0%22%2C%22removeItemFromCart%22%2C%22getMyCart%22%5D%5D%2C%5B%22%2FUsers%2Fobadosunmu%2FDocuments%2Fnewcommerce%2Fchooselifeandpeace%2Flib%2Factions%2Fuser.actions.ts%22%2C%5B%22updateProfile%22%2C%22getUserById%22%2C%22SignOut%22%2C%22updateUserAddress%22%2C%22%24%24ACTION_0%22%2C%22updateUserPaymentMethod%22%2C%22signUp%22%2C%22signInWithCredentials%22%5D%5D%5D&__client_imported__=!"
       },
       "layer": {
-        "app/(root)/page": "rsc"
+        "app/(root)/page": "rsc",
+        "app/(root)/cart/page": "rsc"
       }
     }
   },
   "edge": {},
-  "encryptionKey": "msL4k6y2r9OZRAjH3LRtAhXkR2cthCKDvZNUNvkLoH8="
+  "encryptionKey": "/qC4hzjpm+rvs1Abdpa9DXSyaAg6jIP9TN4UwlSpmNw="
 }
