@@ -13,9 +13,16 @@ export default async function Search() {
   const categories = await getAllCategories()
   return (
     <form action="/search" method="GET">
-      <div className="flex w-full max-w-sm items-center space-x-2">
+      <div className="flex w-full" style={{ color: '#ffffff' }}>
         <Select name="category">
-          <SelectTrigger className="w-[180px]">
+          <SelectTrigger
+            style={{
+              backgroundColor: '#ffffff',
+              color: '#1d132d',
+              width: '100px',
+              padding: '25px',
+            }}
+          >
             <SelectValue placeholder="All" />
           </SelectTrigger>
           <SelectContent>
@@ -33,9 +40,13 @@ export default async function Search() {
           name="q"
           type="text"
           placeholder="Search..."
-          className="md:w-[100px] lg:w-[300px]"
+          style={{
+            backgroundColor: '#ffffff',
+            width: '450px',
+            padding: '25px 3px',
+          }}
         />
-        <Button>
+        <Button style={{ backgroundColor: '#F5BF77', padding: '26px' }}>
           <SearchIcon />
         </Button>
       </div>

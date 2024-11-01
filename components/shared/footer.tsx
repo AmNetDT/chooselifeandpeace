@@ -5,12 +5,19 @@ import Link from 'next/link'
 
 const Footer = () => {
   return (
-    <footer className="wow fadeInUp relative z-10 bg-white pt-16 dark:bg-gray-dark md:pt-20 lg:pt-24">
+    <footer className="wow fadeInUp relative z-10 pt-16 dark:bg-gray-dark md:pt-20 lg:pt-24">
       <div className="container">
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4 md:w-1/2 ml-20 lg:w-4/12 xl:w-5/12">
             <div className="mb-12 max-w-[360px] ml-20 px-20 lg:mb-16">
               <Link href="/" className="mb-8 inline-block">
+                <Image
+                  src="/assets/icons/logo.png"
+                  alt="logo"
+                  className="w-full dark:hidden"
+                  width={100}
+                  height={50}
+                />
                 <Image
                   src="/assets/icons/logo.png"
                   alt={`${APP_NAME} logo`}

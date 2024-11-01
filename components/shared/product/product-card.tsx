@@ -8,12 +8,12 @@ import { Product } from '@/types'
 
 const ProductCard = ({ product }: { product: Product }) => {
   return (
-    <Card className="w-full max-w-sm">
+    <Card className="w-full max-w-sm radius-0">
       <CardHeader className="p-0 items-center">
         <Link href={`/product/${product.slug}`}>
           <Image
             alt={product.name}
-            className="aspect-square object-cover rounded"
+            className="aspect-square object-cover"
             height={300}
             src={product.images![0]}
             width={300}

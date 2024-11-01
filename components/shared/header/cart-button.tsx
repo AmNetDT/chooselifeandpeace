@@ -8,8 +8,17 @@ import { getMyCart } from '@/lib/actions/cart.actions'
 export default async function CartButton() {
   const cart = await getMyCart()
   return (
-    <Button asChild variant="ghost">
-      <Link href="/cart">
+    <Button
+      asChild
+      variant="ghost"
+      style={{
+        padding: '25px',
+      }}
+    >
+      <Link
+        href="/cart"
+        style={{ color: '#ffffff', backgroundColor: '#1d132d' }}
+      >
         <ShoppingCart className="mr-1" />
         Cart
         {cart && cart.items.length > 0 && (

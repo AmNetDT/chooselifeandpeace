@@ -19,14 +19,14 @@ import Search from './search'
 const Header = async () => {
   const categories = await getAllCategories()
   return (
-    <header className="w-full border-b">
+    <header className="w-full border-b" style={{ backgroundColor: '#1d132d' }}>
       <div className="wrapper flex-between">
         <div className="flex-start">
           <Link href="/" className="flex-start">
             <Image
               src="/assets/icons/logo.png"
-              width={72}
-              height={72}
+              width={70}
+              height={70}
               alt={`${APP_NAME} logo`}
             />
             {/* {APP_NAME} */}
@@ -36,7 +36,15 @@ const Header = async () => {
           <div className="flex items-center">
             <Drawer direction="left">
               <DrawerTrigger asChild>
-                <Button variant="outline">
+                <Button
+                  variant="outline"
+                  style={{
+                    padding: '25px',
+                    backgroundColor: '#1d132d',
+                    color: '#ffffff',
+                    border: 'none',
+                  }}
+                >
                   <MenuIcon />
                 </Button>
               </DrawerTrigger>
