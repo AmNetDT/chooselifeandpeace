@@ -31,7 +31,7 @@ export default async function UserButton() {
           <div className="flex items-center">
             <Button
               variant="ghost"
-              className="relative w-8 h-8 rounded-full ml-2"
+              className="relative w-8 h-8 rounded-full ml-2 text-white hover:text-black p-6"
             >
               {session.user.name}
             </Button>
@@ -50,13 +50,19 @@ export default async function UserButton() {
           </DropdownMenuLabel>
 
           <DropdownMenuItem>
-            <Link className="w-full" href="/user/profile">
+            <Link
+              className="w-full text-black hover:text-black"
+              href="/user/profile"
+            >
               Profile
             </Link>
           </DropdownMenuItem>
 
           <DropdownMenuItem>
-            <Link className="w-full" href="/user/orders">
+            <Link
+              className="w-full text-black hover:text-black"
+              href="/user/orders"
+            >
               Order History
             </Link>
           </DropdownMenuItem>
@@ -64,7 +70,7 @@ export default async function UserButton() {
           <DropdownMenuItem className="p-0 mb-1">
             <form action={SignOut} className="w-full">
               <Button
-                className="w-full py-4 px-2 h-4 justify-start"
+                className="w-full py-4 px-2 h-4 justify-start text-black hover:text-black"
                 variant="ghost"
               >
                 Sign Out

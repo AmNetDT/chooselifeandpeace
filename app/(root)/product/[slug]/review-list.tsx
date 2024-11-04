@@ -33,7 +33,7 @@ import {
   SelectValue,
 } from '@/components/ui/select'
 import { Textarea } from '@/components/ui/textarea'
-import { useToast } from '@/components/ui/use-toast'
+import { useToast } from '@/hooks/use-toast'
 import {
   createUpdateReview,
   getReviews,
@@ -48,8 +48,10 @@ import { Calendar, Check, StarIcon, User } from 'lucide-react'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
-import { useInView } from 'react-intersection-observer'
 import { z } from 'zod'
+import { useInView } from 'react-cool-inview'
+import { useRef } from 'react'
+
 export default function ReviewList({
   userId,
   productId,
@@ -62,7 +64,8 @@ export default function ReviewList({
   const [page, setPage] = useState(1)
   const [totalPages, setTotalPages] = useState(0)
   const [reviews, setReviews] = useState<Review[]>([])
-  const { ref, inView } = useInView()
+  const { inView } = useInView()
+  const ref = useRef(null)
   const reload = async () => {
     try {
       const res = await getReviews({ productId, page: 1 })
@@ -258,7 +261,12 @@ export default function ReviewList({
             </CardContent>
           </Card>
         ))}
-        <div ref={ref}>{page < totalPages && 'Loading...'}</div>
+        {/* <div ref={ref}>{page < totalPages && 'Loading...'}</div> */}
+        {/* <div {...{ ref }}>{page < totalPages && 'Loading...'}</div> */}
+
+        <span ref={ref}>
+          <div>{page < totalPages && 'Loading...'}</div>
+        </span>
       </div>
     </div>
   )
