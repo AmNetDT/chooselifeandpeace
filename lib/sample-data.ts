@@ -1,20 +1,4 @@
-import { hashSync } from 'bcrypt-ts-edge'
-
 const sampleData = {
-  users: [
-    {
-      name: 'John',
-      email: 'admin@example.com',
-      password: hashSync('123456', 10),
-      role: 'admin',
-    },
-    {
-      name: 'Jane',
-      email: 'jane@example.com',
-      password: hashSync('123456', 10),
-      role: 'user',
-    },
-  ],
   products: [
     {
       name: 'Yorke Flare - Washed Black',
@@ -50,6 +34,24 @@ const sampleData = {
       banner: '/assets/images/banner-2.jpeg',
     },
     {
+      name: 'Urcle Thermal - Black',
+      slug: 'or 4 interest-free payments of $261197.56 with',
+      category: "Men's Pant",
+      images: [
+        '/assets/images/imag001.webp',
+        '/assets/images/imag002.webp',
+        '/assets/images/imag003.jpg',
+        '/assets/images/imag004.jpg',
+      ],
+      price: '50.90',
+      brand: 'Gallery Dept',
+      rating: '4.5',
+      numReviews: 3,
+      stock: 5,
+      description:
+        'The Urcle Thermal in Black is crafted from cotton, featuring a vintage treatment that enhances its character. ',
+    },
+    {
       name: 'Ventura Hoodie - Ash Black',
       slug: 'showerproof-sportsuit-track-pants',
       category: 'Track Pants',
@@ -80,3 +82,7 @@ const sampleData = {
 }
 
 export default sampleData
+
+///Use this to push the database
+/// npx drizzle-kit push
+///  npx tsx ./db/seed.ts

@@ -23,16 +23,16 @@ const main = async () => {
     await db.delete(schema.users)
     await db.delete(schema.products)
 
-    const resUsers = await db
-      .insert(schema.users)
-      .values(sampleData.users)
-      .returning()
+    // const resUsers = await db
+    //   .insert(schema.users)
+    //   .values(sampleData.users)
+    //   .returning()
 
     const resProducts = await db
       .insert(schema.products)
       .values(sampleData.products)
       .returning()
-    console.log({ resProducts, resUsers })
+    console.log({ resProducts /*, resUsers */ })
     await client.end()
   } catch (error) {
     console.error(error)
