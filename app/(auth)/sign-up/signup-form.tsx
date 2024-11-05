@@ -35,7 +35,9 @@ export default function SignUpForm() {
       <input type="hidden" name="callbackUrl" value={callbackUrl} />
       <div className="space-y-6">
         <div>
-          <Label htmlFor="name">Name</Label>
+          <Label htmlFor="name" className="sm:text-lg md:text-xl">
+            Name
+          </Label>
           <Input
             id="name"
             name="name"
@@ -46,7 +48,9 @@ export default function SignUpForm() {
           />
         </div>
         <div>
-          <Label htmlFor="email">Email</Label>
+          <Label htmlFor="email" className="sm:text-lg md:text-xl">
+            Email
+          </Label>
           <Input
             id="email"
             name="email"
@@ -57,7 +61,9 @@ export default function SignUpForm() {
           />
         </div>
         <div>
-          <Label htmlFor="password">Password</Label>
+          <Label htmlFor="password" className="sm:text-lg md:text-xl">
+            Password
+          </Label>
           <Input
             id="password"
             name="password"
@@ -67,7 +73,9 @@ export default function SignUpForm() {
           />
         </div>
         <div>
-          <Label htmlFor="confirmPassword">Confirm Password</Label>
+          <Label htmlFor="confirmPassword" className="sm:text-lg md:text-xl">
+            Confirm Password
+          </Label>
           <Input
             id="confirmPassword"
             name="confirmPassword"
@@ -83,7 +91,7 @@ export default function SignUpForm() {
         {!data.success && (
           <div className="text-center text-destructive">{data.message}</div>
         )}
-        <div className="text-sm text-center text-muted-foreground">
+        <div className="sm:text-lg md:text-xl">
           Already have an account?{' '}
           <Link
             target="_self"

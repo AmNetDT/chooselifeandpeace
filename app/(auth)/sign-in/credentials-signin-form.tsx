@@ -32,7 +32,9 @@ export default function CredentialsSignInForm() {
       <input type="hidden" name="callbackUrl" value={callbackUrl} />
       <div className="space-y-6">
         <div>
-          <Label htmlFor="email">Email</Label>
+          <Label htmlFor="email" className="sm:text-lg md:text-xl">
+            Email
+          </Label>
           <Input
             id="email"
             name="email"
@@ -43,7 +45,9 @@ export default function CredentialsSignInForm() {
           />
         </div>
         <div>
-          <Label htmlFor="password">Password</Label>
+          <Label htmlFor="password" className="sm:text-lg md:text-xl">
+            Password
+          </Label>
           <Input
             id="password"
             name="password"
@@ -68,7 +72,7 @@ export default function CredentialsSignInForm() {
           </div>
         )}
 
-        <div className="text-sm text-center text-muted-foreground">
+        <div className="sm:text-lg md:text-xl">
           Don&apos;t have an account?{' '}
           <Link
             target="_self"

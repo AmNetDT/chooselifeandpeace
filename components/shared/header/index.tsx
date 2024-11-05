@@ -39,10 +39,10 @@ const Header = async () => {
                 <Button
                   variant="outline"
                   style={{
-                    padding: '25px',
+                    padding: '23px',
                     backgroundColor: '#1d132d',
                     color: '#ffffff',
-                    border: 'none',
+                    border: 'solid 1px #ffffff',
                   }}
                 >
                   <MenuIcon />
@@ -58,6 +58,9 @@ const Header = async () => {
                         variant="ghost"
                         key={category.name}
                         asChild
+                        style={{
+                          fontSize: '1.2rem', // Corrected font-size to fontSize in camelCase
+                        }}
                       >
                         <DrawerClose asChild>
                           <Link href={`/search?category=${category.name}`}>

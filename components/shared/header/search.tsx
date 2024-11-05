@@ -26,11 +26,19 @@ export default async function Search() {
             <SelectValue placeholder="All" />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem key={'All'} value={'all'}>
+            <SelectItem
+              key={'All'}
+              value={'all'}
+              style={{ fontSize: '1.0rem' }}
+            >
               All
             </SelectItem>
             {categories.map((category: { name: string }) => (
-              <SelectItem key={category.name} value={category.name}>
+              <SelectItem
+                key={category.name}
+                value={category.name}
+                style={{ fontSize: '1.0rem' }}
+              >
                 {category.name}
               </SelectItem>
             ))}
@@ -39,14 +47,21 @@ export default async function Search() {
         <Input
           name="q"
           type="text"
-          placeholder="Search..."
           style={{
-            backgroundColor: '#ffffff',
+            backgroundColor: 'lavender',
+            color: '#000000',
             width: '450px',
             padding: '25px 3px',
+            fontSize: '1.0rem',
           }}
         />
-        <Button style={{ backgroundColor: '#F5BF77', padding: '26px' }}>
+        <Button
+          style={{
+            backgroundColor: '#F5BF77',
+            padding: '26px',
+            fontSize: '1.0rem',
+          }}
+        >
           <SearchIcon />
         </Button>
       </div>

@@ -97,7 +97,7 @@ const Footer = () => {
                 <li>
                   <a
                     href="/about/"
-                    className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary !leading-relaxed sm:text-lg md:text-xl"
+                    className="mb-4 inline-block text-base text-body-color duration-300 hover:underline dark:text-body-color-dark dark:hover:text-primary !leading-relaxed sm:text-lg md:text-xl"
                   >
                     About
                   </a>
@@ -105,7 +105,7 @@ const Footer = () => {
                 <li>
                   <a
                     href="/"
-                    className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary !leading-relaxed sm:text-lg md:text-xl"
+                    className="mb-4 inline-block text-base text-body-color duration-300 hover:underline dark:text-body-color-dark dark:hover:text-primary !leading-relaxed sm:text-lg md:text-xl"
                   >
                     Refund Policy
                   </a>
@@ -123,7 +123,7 @@ const Footer = () => {
                 <li>
                   <a
                     href="/"
-                    className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary !leading-relaxed sm:text-lg md:text-xl"
+                    className="mb-4 inline-block text-base text-body-color duration-300 hover:underline dark:text-body-color-dark dark:hover:text-primary !leading-relaxed sm:text-lg md:text-xl"
                   >
                     Terms of Use
                   </a>
@@ -131,7 +131,7 @@ const Footer = () => {
                 <li>
                   <a
                     href="/"
-                    className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary !leading-relaxed sm:text-lg md:text-xl"
+                    className="mb-4 inline-block text-base text-body-color duration-300 hover:underline dark:text-body-color-dark dark:hover:text-primary !leading-relaxed sm:text-lg md:text-xl"
                   >
                     Privacy Policy
                   </a>

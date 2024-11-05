@@ -17,7 +17,11 @@ export default async function CartButton() {
     >
       <Link
         href="/cart"
-        style={{ color: '#ffffff', backgroundColor: '#1d132d' }}
+        style={{
+          color: '#ffffff',
+          backgroundColor: '#1d132d',
+          fontSize: '1.0rem',
+        }}
       >
         <ShoppingCart className="mr-1" />
         Cart

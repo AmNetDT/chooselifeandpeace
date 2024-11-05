@@ -18,6 +18,7 @@ export default async function UserButton() {
         <Button
           style={{
             padding: '25px',
+            fontSize: '1.0rem', // Corrected font-size to fontSize in camelCase
           }}
         >
           Sign In

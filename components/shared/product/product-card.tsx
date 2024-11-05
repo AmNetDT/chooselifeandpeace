@@ -23,11 +23,11 @@ const ProductCard = ({ product }: { product: Product }) => {
       </CardHeader>
       <CardContent className="p-4 grid gap-4">
         <div className="grid gap-1.5 text-sm leading-4">
-          <p className="text-xs leading-3">{product.brand}</p>
+          <p style={{ fontSize: '1.3rem' }}>{product.brand}</p>
         </div>
         <div className="grid gap-1.5 text-sm leading-4">
           <Link href={`/product/${product.slug}`}>
-            <h2 className="text-sm font-medium">{product.name}</h2>
+            <h1 style={{ fontSize: '1.0rem' }}>{product.name}</h1>
           </Link>
         </div>
         <div className="flex-between gap-4">
