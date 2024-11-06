@@ -14,7 +14,7 @@ const CartCheckoutComponent = ({ cart, isPending }: CartCheckoutProps) => {
   if (!cart || cart.items.length === 0) return null
 
   return (
-    <Card className="p-0 rounded-none">
+    <Card className="p-0 rounded-none bg-black">
       <CardContent className="p-4">
         <div className="flex justify-center p-0 rounded-none">
           <Link href="/shipping-address">
