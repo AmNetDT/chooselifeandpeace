@@ -5,12 +5,13 @@ import Link from 'next/link'
 
 const Footer = () => {
   return (
-    <footer className="wow fadeInUp relative z-10 pt-16 dark:bg-gray-dark md:pt-20 lg:pt-24">
-      <div className="container">
-        <div className="-mx-4 flex flex-wrap">
-          <div className="w-full px-4 md:w-1/2 ml-20 lg:w-4/12 xl:w-5/12">
-            <div className="mb-12 max-w-[360px] ml-20 px-20 lg:mb-16">
-              <Link href="/" className="mb-8 inline-block">
+    <footer className="wow fadeInUp relative z-10 pt-8 sm:pt-12 md:pt-16 lg:pt-20 xl:pt-24 dark:bg-gray-dark">
+      <div className="container mx-auto">
+        <div className="flex flex-wrap -mx-4">
+          {/* Logo and Social Links */}
+          <div className="w-full sm:w-1/2 md:w-1/3 lg:w-3/12 xl:w-4/12 px-4">
+            <div className="mb-8 max-w-[360px] mx-auto lg:mb-16">
+              <Link href="/" className="mb-6 inline-block">
                 <Image
                   src="/assets/icons/logo.png"
                   alt="logo"
@@ -20,18 +21,18 @@ const Footer = () => {
                 />
                 <Image
                   src="/assets/icons/logo.png"
-                  alt={`${APP_NAME} logo`}
+                  alt="Dark mode logo"
                   className="hidden w-full dark:block"
                   width={120}
                   height={20}
                 />
               </Link>
-
-              <div className="flex items-left ml-0 px-0">
+              <div className="flex lg:flex items-center justify-center sm:justify-start space-x-6">
+                {/* Social Icons */}
                 <a
                   href="/" // Link to the facebook.com
                   aria-label="social-link"
-                  className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                  className="mr-6 text-body-color duration-300 hover:text-gray-500 dark:text-body-color-dark"
                 >
                   <svg
                     width="9"
@@ -45,7 +46,7 @@ const Footer = () => {
                 <a
                   href="/" // Link to the twitter.com
                   aria-label="social-link"
-                  className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                  className="mr-6 text-body-color duration-300 hover:text-gray-500 dark:text-body-color-dark"
                 >
                   <svg
                     width="19"
@@ -59,7 +60,7 @@ const Footer = () => {
                 <a
                   href="/" // Link to the youtube.com
                   aria-label="social-link"
-                  className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                  className="mr-6 text-body-color duration-300 hover:text-gray-500 dark:text-body-color-dark"
                 >
                   <svg
                     width="18"
@@ -73,7 +74,7 @@ const Footer = () => {
                 <a
                   href="/" // Link to the linkedin.com
                   aria-label="social-link"
-                  className="text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                  className="text-body-color duration-300 hover:text-gray-500 dark:text-body-color-dark"
                 >
                   <svg
                     width="17"
@@ -88,24 +89,22 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
-            <div className="mb-12 mt-12 lg:mb-16">
-              {/* <h2 className="mb-10 text-xl font-bold text-black dark:text-dark">
-                Useful Links
-              </h2> */}
+          {/* Links Column 1 */}
+          <div className="w-1/2 sm:w-1/2 md:w-1/3 lg:w-2/12 xl:w-2/12 px-4">
+            <div className="mb-8 lg:mb-16">
               <ul>
                 <li>
                   <a
                     href="/about/"
-                    className="mb-4 inline-block text-base text-body-color duration-300 hover:underline dark:text-body-color-dark dark:hover:text-primary !leading-relaxed sm:text-lg md:text-xl"
+                    className="block text-base sm:text-lg md:text-xl text-body-color dark:text-body-color-dark duration-300 hover:text-gray-500 dark:text-body-color-dark"
                   >
                     About
                   </a>
                 </li>
                 <li>
                   <a
-                    href="/"
-                    className="mb-4 inline-block text-base text-body-color duration-300 hover:underline dark:text-body-color-dark dark:hover:text-primary !leading-relaxed sm:text-lg md:text-xl"
+                    href="/refund-policy/"
+                    className="block text-base sm:text-lg md:text-xl text-body-color dark:text-body-color-dark duration-300 hover:text-gray-500 dark:text-body-color-dark"
                   >
                     Refund Policy
                   </a>
@@ -114,24 +113,22 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
-            <div className="mb-12 mt-12 lg:mb-16">
-              {/* <h2 className="mb-10 text-xl font-bold text-black dark:text-dark">
-                Terms
-              </h2> */}
+          {/* Links Column 2 */}
+          <div className="w-1/2 sm:w-1/2 md:w-1/3 lg:w-2/12 xl:w-2/12 px-4">
+            <div className="mb-8 lg:mb-16">
               <ul>
                 <li>
                   <a
-                    href="/"
-                    className="mb-4 inline-block text-base text-body-color duration-300 hover:underline dark:text-body-color-dark dark:hover:text-primary !leading-relaxed sm:text-lg md:text-xl"
+                    href="/terms-of-use/"
+                    className="block text-base sm:text-lg md:text-xl text-body-color dark:text-body-color-dark duration-300 hover:text-gray-500 dark:text-body-color-dark"
                   >
                     Terms of Use
                   </a>
                 </li>
                 <li>
                   <a
-                    href="/"
-                    className="mb-4 inline-block text-base text-body-color duration-300 hover:underline dark:text-body-color-dark dark:hover:text-primary !leading-relaxed sm:text-lg md:text-xl"
+                    href="/privacy-policy/"
+                    className="block text-base sm:text-lg md:text-xl text-body-color dark:text-body-color-dark duration-300 hover:text-gray-500 dark:text-body-color-dark"
                   >
                     Privacy Policy
                   </a>
@@ -140,32 +137,22 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-3/12">
-            <div className="mb-12 mt-12 lg:mb-16">
-              {/* <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
-                Support & Help
-              </h2> */}
-              {/* <ul>
-                <li>
-                  <a
-                    href="/"
-                    className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary !leading-relaxed sm:text-lg md:text-xl"
-                  >
-                    Terms of Use
-                  </a>
-                </li>
-              </ul> */}
+          {/* Additional Column (Support/Help) */}
+          <div className="w-full md:w-1/2 lg:w-3/12 xl:w-2/12 px-4">
+            <div className="mb-8 lg:mb-16">
+              {/* Content for Support & Help can go here if needed */}
             </div>
           </div>
         </div>
 
-        <div className="h-px w-full bg-gradient-to-r from-transparent via-[#D2D8E183] to-transparent dark:via-[#959CB183]"></div>
-        <div className="p-5 flex-center">
-          {`${new Date().getFullYear()}`} {APP_NAME}. All Rights reserved.
+        {/* Divider */}
+        <div className="h-px w-full bg-gradient-to-r from-transparent via-gray-300 dark:via-gray-700 to-transparent my-6"></div>
+
+        {/* Footer Bottom */}
+        <div className="text-center text-sm text-body-color dark:text-body-color-dark py-5">
+          {new Date().getFullYear()} {APP_NAME}. All Rights Reserved.
         </div>
       </div>
-
-      <div className="absolute bottom-24 left-0 z-[-1]"></div>
     </footer>
   )
 }

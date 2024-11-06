@@ -23,28 +23,35 @@ const ProductCard = ({ product }: { product: Product }) => {
       </CardHeader>
       <CardContent className="p-4 grid gap-4">
         <div className="grid gap-1.5 text-sm leading-4">
+          {/* Brand Link with Lighter-Black Hover */}
           <Link
             href={`/product/${product.slug}`}
-            className="hover:text-lavender hover:underline"
+            className="hover:text-gray-500"
           >
-            <p style={{ fontSize: '1.3rem' }}>{product.brand}</p>
+            <p className="text-[1.3rem] sm:text-[1.4rem] md:text-[1.5rem] lg:text-[1.6rem]">
+              {product.brand}
+            </p>
           </Link>
         </div>
+
         <div className="grid gap-1.5 text-sm leading-4">
+          {/* Product Name Link with Lighter-Black Hover */}
           <Link
             href={`/product/${product.slug}`}
-            className="hover:text-lavender hover:underline"
+            className="hover:text-gray-500"
           >
-            <h1 style={{ fontSize: '1.0rem' }}>{product.name}</h1>
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl">
+              {product.name}
+            </p>
           </Link>
         </div>
-        <div className="flex-between gap-4">
-          {/* <p>{product.rating} stars</p> */}
+
+        <div className="flex justify-between gap-4 flex-wrap">
           <Rating value={Number(product.rating)} />
           {product.stock > 0 ? (
             <ProductPrice value={Number(product.price)} />
           ) : (
-            <p className="text-destructive">Out of Stock</p>
+            <p className="text-red-500">Out of Stock</p>
           )}
         </div>
       </CardContent>
