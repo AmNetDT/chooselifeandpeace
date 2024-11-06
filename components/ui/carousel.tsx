@@ -1,26 +1,18 @@
 'use client'
 import * as React from 'react'
-import useEmblaCarousel, {
-  type UseEmblaCarouselType,
-} from 'embla-carousel-react'
+import useEmblaCarousel from 'embla-carousel-react'
 import { ArrowLeft, ArrowRight } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { Button } from '@/components/ui/button'
 
-type CarouselApi = UseEmblaCarouselType[1]
-type UseCarouselParameters = Parameters<typeof useEmblaCarousel>
-type CarouselOptions = UseCarouselParameters[0]
-type CarouselPlugin = UseCarouselParameters[1]
 type CarouselProps = {
-  opts?: CarouselOptions
-  plugins?: CarouselPlugin
+  opts?: Parameters<typeof useEmblaCarousel>[0]
+  plugins?: Parameters<typeof useEmblaCarousel>[1]
   orientation?: 'horizontal' | 'vertical'
-  setApi?: (api: CarouselApi) => void
 }
 
 type CarouselContextProps = {
   carouselRef: ReturnType<typeof useEmblaCarousel>[0]
-  api: ReturnType<typeof useEmblaCarousel>[1]
   scrollPrev: () => void
   scrollNext: () => void
   canScrollPrev: boolean
@@ -45,7 +37,6 @@ const Carousel = React.forwardRef<
     {
       orientation = 'horizontal',
       opts,
-      setApi,
       plugins,
       className,
       children,
@@ -53,39 +44,34 @@ const Carousel = React.forwardRef<
     },
     ref
   ) => {
-    const [carouselRef, api] = useEmblaCarousel(
-      {
+    // Check if opts is defined and correctly structure it
+    const carouselOptions = React.useMemo(() => {
+      return {
         ...opts,
-        axis: orientation === 'horizontal' ? 'x' : 'y',
-        loop: true,
-        speed: 5,
-      },
-      plugins
-    )
+        axis: orientation === 'horizontal' ? 'x' : 'y', // Explicitly set 'x' or 'y'
+        loop: true, // Enabling loop for continuous scroll
+      }
+    }, [opts, orientation])
+
+    const [carouselRef, api] = useEmblaCarousel(carouselOptions as any, plugins) // Use 'as any' to override the type mismatch
     const [canScrollPrev, setCanScrollPrev] = React.useState(false)
     const [canScrollNext, setCanScrollNext] = React.useState(false)
 
-    const onSelect = React.useCallback((api: CarouselApi) => {
+    const onSelect = React.useCallback(() => {
       if (!api) return
       setCanScrollPrev(api.canScrollPrev())
       setCanScrollNext(api.canScrollNext())
-    }, [])
+    }, [api])
 
     const scrollPrev = React.useCallback(() => api?.scrollPrev(), [api])
     const scrollNext = React.useCallback(() => api?.scrollNext(), [api])
 
     React.useEffect(() => {
-      if (!api || !setApi) return
-      setApi(api)
-    }, [api, setApi])
-
-    React.useEffect(() => {
       if (!api) return
-      onSelect(api)
-      api.on('reInit', onSelect)
+      onSelect()
       api.on('select', onSelect)
       return () => {
-        api?.off('select', onSelect)
+        api.off('select', onSelect)
       }
     }, [api, onSelect])
 
@@ -93,10 +79,8 @@ const Carousel = React.forwardRef<
       <CarouselContext.Provider
         value={{
           carouselRef,
-          api: api,
           opts,
-          orientation:
-            orientation || (opts?.axis === 'y' ? 'vertical' : 'horizontal'),
+          orientation,
           scrollPrev,
           scrollNext,
           canScrollPrev,
@@ -217,7 +201,6 @@ const CarouselNext = React.forwardRef<
 CarouselNext.displayName = 'CarouselNext'
 
 export {
-  type CarouselApi,
   Carousel,
   CarouselContent,
   CarouselItem,
