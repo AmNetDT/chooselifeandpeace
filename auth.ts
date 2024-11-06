@@ -55,6 +55,7 @@ export const config = {
   callbacks: {
     jwt: async ({ token, user, trigger, session }: any) => {
       if (user) {
+        token.role = user.role
         if (trigger === 'signIn' || trigger === 'signUp') {
           const sessionCartId = cookies().get('sessionCartId')?.value
           if (!sessionCartId) throw new Error('Session Cart Not Found')
@@ -80,6 +81,7 @@ export const config = {
       if (session?.user.name && trigger === 'update') {
         token.name = session.user.name
       }
+
       return token
     },
     session: async ({ session, user, trigger, token }: any) => {

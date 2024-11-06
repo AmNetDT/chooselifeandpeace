@@ -3,6 +3,8 @@ import db from '@/db/drizzle'
 import { products } from '@/db/schema'
 import { and, count, eq, ilike, sql } from 'drizzle-orm/sql'
 import { PAGE_SIZE } from '../constants'
+import { revalidatePath } from 'next/cache'
+import { formatError } from '../utils'
 
 export async function getLatestProducts() {
   const data = await db.query.products.findMany({
@@ -59,6 +61,7 @@ export async function getAllProducts({
     rating && rating !== 'all'
       ? sql`${products.rating} >= ${rating}`
       : undefined
+
   // 100-200
   const priceFilter =
     price && price !== 'all'
@@ -74,7 +77,6 @@ export async function getAllProducts({
       : sort === 'rating'
       ? desc(products.rating)
       : desc(products.createdAt)
-
   const condition = and(queryFilter, categoryFilter, ratingFilter, priceFilter)
   const data = await db
     .select()
@@ -92,5 +94,23 @@ export async function getAllProducts({
   return {
     data,
     totalPages: Math.ceil(dataCount[0].count / limit),
+  }
+}
+
+// DELETE
+export async function deleteProduct(id: string) {
+  try {
+    const productExists = await db.query.products.findFirst({
+      where: eq(products.id, id),
+    })
+    if (!productExists) throw new Error('Product not found')
+    await db.delete(products).where(eq(products.id, id))
+    revalidatePath('/admin/products')
+    return {
+      success: true,
+      message: 'Product deleted successfully',
+    }
+  } catch (error) {
+    return { success: false, message: formatError(error) }
   }
 }

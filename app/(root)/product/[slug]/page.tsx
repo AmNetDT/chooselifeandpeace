@@ -13,6 +13,7 @@ import { round2 } from '@/lib/utils'
 import ReviewList from './review-list'
 import { auth } from '@/auth'
 import Rating from '@/components/shared/product/rating'
+import CartCheckout from '@/components/ui/cartcheckout'
 
 export async function generateMetadata({
   params,
@@ -39,6 +40,7 @@ const ProductDetails = async ({
   if (!product) notFound()
   const cart = await getMyCart()
   const session = await auth()
+
   return (
     <>
       <section>
@@ -47,7 +49,7 @@ const ProductDetails = async ({
             <ProductImages images={product.images!} />
           </div>
 
-          <div className="col-span-2 flex flex-col w-full  gap-8 p-5">
+          <div className="col-span-2 flex flex-col w-full gap-8 p-5">
             <div className="flex flex-col gap-6">
               <p className="p-medium-16 rounded-full bg-grey-500/10 text-grey-500">
                 {product.brand} {product.category}
@@ -77,7 +79,7 @@ const ProductDetails = async ({
             </div>
           </div>
           <div>
-            <Card>
+            <Card className="p-0 rounded-none">
               <CardContent className="p-4">
                 <div className="mb-2 flex justify-between">
                   <div>Price</div>
@@ -94,7 +96,7 @@ const ProductDetails = async ({
                   )}
                 </div>
                 {product.stock !== 0 && (
-                  <div className=" flex-center">
+                  <div className="flex-center">
                     <AddToCart
                       cart={cart}
                       item={{
@@ -110,6 +112,9 @@ const ProductDetails = async ({
                 )}
               </CardContent>
             </Card>
+            {/* Cart Checkout Section */}
+
+            <CartCheckout cart={cart} isPending={false} />
           </div>
         </div>
       </section>
