@@ -8,15 +8,17 @@ import {
   shippingAddressSchema,
   signInFormSchema,
   signUpFormSchema,
+  updateUserSchema,
 } from '../validator'
+import { formatError } from '../utils'
 import { hashSync } from 'bcrypt-ts-edge'
 import db from '@/db/drizzle'
 import { users } from '@/db/schema'
-import { formatError } from '../utils'
 import { ShippingAddress } from '@/types'
-import { eq } from 'drizzle-orm'
+import { count, desc, eq } from 'drizzle-orm'
 import { revalidatePath } from 'next/cache'
 import { z } from 'zod'
+import { PAGE_SIZE } from '../constants'
 
 //User
 export async function signUp(prevState: unknown, formData: FormData) {
@@ -76,6 +78,25 @@ export const SignOut = async () => {
   await signOut()
 }
 
+export async function getAllUsers({
+  limit = PAGE_SIZE,
+  page,
+}: {
+  limit?: number
+  page: number
+}) {
+  const data = await db.query.users.findMany({
+    orderBy: [desc(users.createdAt)],
+    limit,
+    offset: (page - 1) * limit,
+  })
+  const dataCount = await db.select({ count: count() }).from(users)
+  return {
+    data,
+    totalPages: Math.ceil(dataCount[0].count / limit),
+  }
+}
+
 export async function getUserById(userId: string) {
   const user = await db.query.users.findFirst({
     where: (users, { eq }) => eq(users.id, userId),
@@ -83,6 +104,40 @@ export async function getUserById(userId: string) {
   if (!user) throw new Error('User not found')
   return user
 }
+
+export async function updateUser(user: z.infer<typeof updateUserSchema>) {
+  try {
+    await db
+      .update(users)
+      .set({
+        name: user.name,
+        role: user.role,
+      })
+      .where(eq(users.id, user.id))
+    revalidatePath('/admin/users')
+    return {
+      success: true,
+      message: 'User updated successfully',
+    }
+  } catch (error) {
+    return { success: false, message: formatError(error) }
+  }
+}
+
+// DELETE
+export async function deleteUser(id: string) {
+  try {
+    await db.delete(users).where(eq(users.id, id))
+    revalidatePath('/admin/users')
+    return {
+      success: true,
+      message: 'User deleted successfully',
+    }
+  } catch (error) {
+    return { success: false, message: formatError(error) }
+  }
+}
+// UPDATE
 
 export async function updateUserAddress(data: ShippingAddress) {
   try {

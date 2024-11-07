@@ -23,6 +23,16 @@ export const signUpFormSchema = z
     message: "Passwords don't match",
     path: ['confirmPassword'],
   })
+
+export const insertReviewSchema = createInsertSchema(reviews, {
+  rating: z.coerce
+    .number()
+    .int()
+    .min(1, 'Rating must be at least 1')
+    .max(5, 'Rating must be at most 5'),
+})
+
+// PRODUCT
 export const insertProductSchema = createSelectSchema(products, {
   images: z.array(z.string()).min(1, 'Product must have at least one image'),
   stock: z.coerce.number().min(0, 'Stock must be at least 0'),
@@ -32,13 +42,13 @@ export const insertProductSchema = createSelectSchema(products, {
   numReviews: true,
   createdAt: true,
 })
-
-export const insertReviewSchema = createInsertSchema(reviews, {
-  rating: z.coerce
-    .number()
-    .int()
-    .min(1, 'Rating must be at least 1')
-    .max(5, 'Rating must be at most 5'),
+export const updateProductSchema = createSelectSchema(products, {
+  images: z.array(z.string()).min(1, 'Product must have at least one image'),
+  stock: z.coerce.number().min(0, 'Stock must be at least 0'),
+}).omit({
+  rating: true,
+  numReviews: true,
+  createdAt: true,
 })
 
 // CART
@@ -101,4 +111,10 @@ export const insertOrderItemSchema = createInsertSchema(orderItems, {
 export const updateProfileSchema = z.object({
   name: z.string().min(3, 'Name must be at least 3 characters'),
   email: z.string().email().min(3, 'Email must be at least 3 characters'),
+})
+
+export const updateUserSchema = updateProfileSchema.extend({
+  id: z.string().min(1, 'Id is required'),
+  name: z.string().min(3, 'Name must be at least 3 characters'),
+  role: z.string().min(1, 'Role is required'),
 })

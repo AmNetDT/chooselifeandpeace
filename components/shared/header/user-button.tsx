@@ -70,7 +70,10 @@ export default async function UserButton() {
 
           {session.user.role === 'admin' && (
             <DropdownMenuItem>
-              <Link className="w-full" href="/admin/overview">
+              <Link
+                className="w-full text-black hover:text-black"
+                href="/admin/overview"
+              >
                 Admin
               </Link>
             </DropdownMenuItem>

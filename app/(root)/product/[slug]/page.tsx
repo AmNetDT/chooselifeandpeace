@@ -55,9 +55,6 @@ const ProductDetails = async ({
                 {product.brand} {product.category}
               </p>
               <h1 className="h3-bold">{product.name}</h1>
-              {/* <p>
-                {product.rating} of {product.numReviews} reviews
-              </p> */}
 
               <Rating
                 value={Number(product.rating)}
