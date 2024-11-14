@@ -10,7 +10,10 @@ import { z } from 'zod'
 // PRODUCTS
 export type Product = InferSelectModel<typeof products>
 export type Review = InferSelectModel<typeof reviews> & {
-  user?: { name: string }
+  // user?: { name: string }
+  user?: {
+    name: string | null
+  }
 }
 
 // CART

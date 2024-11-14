@@ -122,3 +122,13 @@ footer {
   border-top: 1px solid #eaeaea;
   background-color: #1d132d;
 }
+.footer-link {
+  font-size: 10px; /* Small and readable text */
+  color: #ffffff; /* Lighter text color */
+  transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+.footer-link:hover {
+  color: #8e9193; /* Change color on hover */
+  text-decoration: underline; /* Add underline for visual feedback */
+}
