@@ -36,7 +36,7 @@ export default async function SignUp({
           <CardTitle className="text-left sm:text-lg md:text-xl">
             Create Account
           </CardTitle>
-          <CardDescription className="text-center">
+          <CardDescription className="text-dark text-center sm:text-lg md:text-xl">
             Enter your information below to create your account
           </CardDescription>
         </CardHeader>

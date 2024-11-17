@@ -1,3 +1,5 @@
+'use client'
+import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import ProductPrice from './product-price'
@@ -8,6 +10,11 @@ import { Card, CardContent, CardHeader } from '@/components/ui/card'
 import { Product } from '@/types'
 
 const ProductCard = ({ product }: { product: Product }) => {
+  const [isExpanded, setIsExpanded] = useState(false)
+
+  // Limit to 30 words
+  const truncatedName = product.name.split(' ').slice(0, 20).join(' ')
+
   return (
     <Card className="w-full max-w-sm radius-0">
       <CardHeader className="p-0 items-center">
@@ -41,7 +48,18 @@ const ProductCard = ({ product }: { product: Product }) => {
             className="hover:text-gray-500"
           >
             <p className="text-[16px] leading-[1.5] capitalize">
-              {product.name}
+              {isExpanded ? product.name : truncatedName}
+              {!isExpanded && product.name.split(' ').length > 20 && (
+                <>
+                  ...{' '}
+                  <span
+                    onClick={() => setIsExpanded(true)}
+                    className="text-blue-500 cursor-pointer"
+                  >
+                    ...
+                  </span>
+                </>
+              )}
             </p>
           </Link>
         </div>
