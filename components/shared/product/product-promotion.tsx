@@ -53,7 +53,7 @@ const ProductPromotion = () => {
   return (
     <section className="grid grid-cols-1 md:grid-cols-2 gap-8 my-20">
       <div className="flex flex-col gap-4 justify-center">
-        <h3 className="text-3xl font-bold">Human Made</h3>
+        <h3 className="text-2xl font-bold">Human Made</h3>
         <p className="text-gray-700">
           Founded by NIGO of BAPE, Human Made came to fruition in 2010 in
           collaboration with designer Sk8thing. Inspired by vintage clothing,

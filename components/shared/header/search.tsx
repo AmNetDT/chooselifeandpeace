@@ -13,7 +13,7 @@ export default async function Search() {
   const categories = await getAllCategories()
   return (
     <form action="/search" method="GET">
-      <div className="flex w-full" style={{ color: '#ffffff' }}>
+      <div className="flex w-full" style={{ color: '#000000' }}>
         <Select name="category">
           <SelectTrigger
             style={{
@@ -29,7 +29,11 @@ export default async function Search() {
             <SelectItem
               key={'All'}
               value={'all'}
-              style={{ fontSize: '1.0rem' }}
+              style={{
+                fontSize: '1.0rem',
+                color: 'black', // Text color remains black
+              }}
+              className="hover:text-black" // Ensure text remains black on hover
             >
               All
             </SelectItem>
@@ -37,7 +41,11 @@ export default async function Search() {
               <SelectItem
                 key={category.name}
                 value={category.name}
-                style={{ fontSize: '1.0rem' }}
+                style={{
+                  fontSize: '1.0rem',
+                  color: 'black', // Text color remains black
+                }}
+                className="hover:text-black" // Ensure text remains black on hover
               >
                 {category.name}
               </SelectItem>

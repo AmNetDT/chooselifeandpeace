@@ -14,7 +14,7 @@ import { useToast } from '@/hooks/use-toast'
 import { addItemToCart, removeItemFromCart } from '@/lib/actions/cart.actions'
 import { formatCurrency } from '@/lib/utils'
 import { Cart } from '@/types'
-import { ArrowRight, Loader, Minus, Plus } from 'lucide-react'
+import { Loader, Minus, Plus } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
@@ -130,9 +130,8 @@ export default function CartForm({ cart }: { cart?: Cart }) {
                 >
                   {isPending ? (
                     <Loader className="animate-spin w-4 h-4" />
-                  ) : (
-                    <ArrowRight className="w-4 h-4" />
-                  )}
+                  ) : // Removed ArrowRight component
+                  null}
                   Proceed to Checkout
                 </Button>
               </CardContent>

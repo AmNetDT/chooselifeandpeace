@@ -22,17 +22,17 @@ const ProductCard = ({ product }: { product: Product }) => {
         </Link>
       </CardHeader>
       <CardContent className="p-4 grid gap-4">
-        <div className="grid gap-1.5 text-sm leading-4">
+        {/* <div className="grid gap-1.5 text-sm leading-4">
           {/* Brand Link with Lighter-Black Hover */}
-          <Link
+        {/* <Link
             href={`/product/${product.slug}`}
             className="hover:text-gray-500"
           >
             <p className="text-[1.3rem] sm:text-[1.4rem] md:text-[1.5rem] lg:text-[1.6rem]">
               {product.brand}
             </p>
-          </Link>
-        </div>
+          </Link> */}
+        {/* </div> */}
 
         <div className="grid gap-1.5 text-sm leading-4">
           {/* Product Name Link with Lighter-Black Hover */}
@@ -40,7 +40,7 @@ const ProductCard = ({ product }: { product: Product }) => {
             href={`/product/${product.slug}`}
             className="hover:text-gray-500"
           >
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl">
+            <p className="text-[16px] leading-[1.5] capitalize">
               {product.name}
             </p>
           </Link>

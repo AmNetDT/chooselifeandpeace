@@ -1,15 +1,12 @@
 'use client'
-
 import { Button } from '@/components/ui/button'
 import { ToastAction } from '@/components/ui/toast'
 import { useToast } from '@/hooks/use-toast'
 import { addItemToCart, removeItemFromCart } from '@/lib/actions/cart.actions'
-import { round2 } from '@/lib/utils'
 import { Cart, CartItem } from '@/types'
 import { Loader, Minus, Plus } from 'lucide-react'
 import { useRouter } from 'next/navigation'
 import { useTransition } from 'react'
-
 export default function AddToCart({
   cart,
   item,
@@ -52,10 +49,7 @@ export default function AddToCart({
         disabled={isPending}
         onClick={() => {
           startTransition(async () => {
-            const res = await addItemToCart({
-              ...item,
-              price: item.price,
-            })
+            const res = await addItemToCart(item)
             toast({
               variant: res.success ? 'default' : 'destructive',
               description: res.message,
@@ -78,10 +72,7 @@ export default function AddToCart({
       disabled={isPending}
       onClick={() => {
         startTransition(async () => {
-          const res = await addItemToCart({
-            ...item,
-            price: round2(item.price),
-          })
+          const res = await addItemToCart(item)
           if (!res.success) {
             toast({
               variant: 'destructive',
@@ -93,7 +84,7 @@ export default function AddToCart({
             description: `${item.name} added to the cart`,
             action: (
               <ToastAction
-                style={{ backgroundColor: '#1d132d', color: 'whitesmoke' }}
+                className="bg-primary"
                 onClick={() => router.push('/cart')}
                 altText="Go to cart"
               >

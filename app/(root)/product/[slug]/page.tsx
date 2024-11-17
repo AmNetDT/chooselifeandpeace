@@ -71,7 +71,7 @@ const ProductDetails = async ({
             </div>
 
             <div>
-              <p>Description:</p>
+              <h3 className="h3-bold  mb-5">Description</h3>
               <p>{product.description}</p>
             </div>
           </div>

@@ -1,6 +1,6 @@
 // components/CartCheckout.tsx
 import { Button } from '@/components/ui/button'
-import { ArrowRight, Loader } from 'lucide-react'
+import { Loader } from 'lucide-react'
 import Link from 'next/link'
 import { Card, CardContent } from '@/components/ui/card'
 import { memo } from 'react'
@@ -21,9 +21,8 @@ const CartCheckoutComponent = ({ cart, isPending }: CartCheckoutProps) => {
             <Button style={{ width: '100%' }} disabled={isPending}>
               {isPending ? (
                 <Loader className="animate-spin w-4 h-4" />
-              ) : (
-                <ArrowRight className="w-4 h-4" />
-              )}
+              ) : // Removed ArrowRight component
+              null}
               Proceed to Checkout
             </Button>
           </Link>

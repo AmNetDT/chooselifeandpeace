@@ -49,7 +49,7 @@ export async function getProductById(productId: string) {
 export async function getLatestProducts() {
   const data = await db.query.products.findMany({
     orderBy: [desc(products.createdAt)],
-    limit: 4,
+    //limit: 4,
   })
   return data
 }
@@ -71,7 +71,7 @@ export async function getFeaturedProducts() {
   const data = await db.query.products.findMany({
     where: eq(products.isFeatured, true),
     orderBy: [desc(products.createdAt)],
-    limit: 4,
+    //limit: 4,
   })
   return data
 }

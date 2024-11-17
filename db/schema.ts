@@ -12,14 +12,14 @@ import {
   uuid,
 } from 'drizzle-orm/pg-core'
 import { primaryKey } from 'drizzle-orm/pg-core/primary-keys'
-import { AdapterAccount } from 'next-auth/adapters'
+import { AdapterAccountType } from 'next-auth/adapters'
 
-//USER
+// USERS
 export const users = pgTable(
   'user',
   {
     id: uuid('id').defaultRandom().primaryKey().notNull(),
-    name: text('name'),
+    name: text('name').notNull(),
     email: text('email').notNull(),
     role: text('role').notNull().default('user'),
     password: text('password'),
@@ -42,7 +42,7 @@ export const accounts = pgTable(
     userId: uuid('userId')
       .notNull()
       .references(() => users.id, { onDelete: 'cascade' }),
-    type: text('type').$type<AdapterAccount['type']>().notNull(),
+    type: text('type').$type<AdapterAccountType>().notNull(),
     provider: text('provider').notNull(),
     providerAccountId: text('providerAccountId').notNull(),
     refresh_token: text('refresh_token'),
@@ -59,6 +59,7 @@ export const accounts = pgTable(
     }),
   })
 )
+
 export const sessions = pgTable('session', {
   sessionToken: text('sessionToken').primaryKey(),
   userId: uuid('userId')
@@ -106,7 +107,30 @@ export const products = pgTable(
     }
   }
 )
-
+export const reviews = pgTable('reviews', {
+  id: uuid('id').defaultRandom().primaryKey().notNull(),
+  userId: uuid('userId')
+    .notNull()
+    .references(() => users.id, { onDelete: 'cascade' }),
+  productId: uuid('productId')
+    .notNull()
+    .references(() => products.id, { onDelete: 'cascade' }),
+  rating: integer('rating').notNull(),
+  title: text('title').notNull(),
+  description: text('slug').notNull(),
+  isVerifiedPurchase: boolean('isVerifiedPurchase').notNull().default(true),
+  createdAt: timestamp('createdAt').notNull().defaultNow(),
+})
+export const productRelations = relations(products, ({ many }) => ({
+  reviews: many(reviews),
+}))
+export const reviewsRelations = relations(reviews, ({ one }) => ({
+  user: one(users, { fields: [reviews.userId], references: [users.id] }),
+  product: one(products, {
+    fields: [reviews.productId],
+    references: [products.id],
+  }),
+}))
 // CARTS
 export const carts = pgTable('cart', {
   id: uuid('id').notNull().defaultRandom().primaryKey(),
@@ -147,7 +171,6 @@ export const orders = pgTable('order', {
   deliveredAt: timestamp('deliveredAt'),
   createdAt: timestamp('createdAt').notNull().defaultNow(),
 })
-
 export const ordersRelations = relations(orders, ({ one, many }) => ({
   orderItems: many(orderItems),
   user: one(users, { fields: [orders.userId], references: [users.id] }),
@@ -179,30 +202,5 @@ export const orderItemsRelations = relations(orderItems, ({ one }) => ({
   order: one(orders, {
     fields: [orderItems.orderId],
     references: [orders.id],
-  }),
-}))
-
-export const reviews = pgTable('reviews', {
-  id: uuid('id').defaultRandom().primaryKey().notNull(),
-  userId: uuid('userId')
-    .notNull()
-    .references(() => users.id, { onDelete: 'cascade' }),
-  productId: uuid('productId')
-    .notNull()
-    .references(() => products.id, { onDelete: 'cascade' }),
-  rating: integer('rating').notNull(),
-  title: text('title').notNull(),
-  description: text('slug').notNull(),
-  isVerifiedPurchase: boolean('isVerifiedPurchase').notNull().default(true),
-  createdAt: timestamp('createdAt').notNull().defaultNow(),
-})
-export const productRelations = relations(products, ({ many }) => ({
-  reviews: many(reviews),
-}))
-export const reviewsRelations = relations(reviews, ({ one }) => ({
-  user: one(users, { fields: [reviews.userId], references: [users.id] }),
-  product: one(products, {
-    fields: [reviews.productId],
-    references: [products.id],
   }),
 }))

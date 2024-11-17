@@ -116,7 +116,7 @@ const Header = async () => {
         </div>
 
         {/* Desktop view: Standard layout (Search, Menu, Cart) */}
-        <div className="hidden md:flex items-center justify-between w-full">
+        <div className="hidden md:flex items-center justify-between w-full mx-0 px-0">
           <div className="flex items-center">
             <Drawer direction="left">
               <DrawerTrigger asChild>
@@ -132,18 +132,25 @@ const Header = async () => {
                   <MenuIcon />
                 </Button>
               </DrawerTrigger>
-              <DrawerContent className="h-full max-w-sm">
-                <DrawerHeader>
-                  <DrawerTitle>Select a category</DrawerTitle>
+              <DrawerContent className="h-full max-w-sm px-0 mx-0">
+                {/* Remove extra padding and margin to extend hover effect */}
+                <DrawerHeader className="px-0">
+                  <DrawerTitle className="text-base px-4 mx-4">
+                    Select a category
+                  </DrawerTitle>
+                  {/* Keep padding only on the title for alignment */}
                   <div className="space-y-1">
                     {categories.map((category) => (
                       <Button
-                        className="w-full justify-start"
+                        className="w-full justify-start hover:bg-gray-200 px-4"
+                        /* Use hover:bg-gray-200 to add a background hover effect */
                         variant="ghost"
                         key={category.name}
                         asChild
                         style={{
-                          fontSize: '1.2rem',
+                          fontSize: '1.0rem',
+                          color: 'black',
+                          paddingLeft: '35px',
                         }}
                       >
                         <DrawerClose asChild>
