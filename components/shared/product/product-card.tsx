@@ -12,8 +12,8 @@ import { Product } from '@/types'
 const ProductCard = ({ product }: { product: Product }) => {
   const [isExpanded, setIsExpanded] = useState(false)
 
-  // Limit to 30 words
-  const truncatedName = product.name.split(' ').slice(0, 20).join(' ')
+  // Limit to 50 characters
+  const truncatedName = product.name.slice(0, 70)
 
   return (
     <Card className="w-full max-w-sm radius-0">
@@ -49,9 +49,9 @@ const ProductCard = ({ product }: { product: Product }) => {
           >
             <p className="text-[16px] leading-[1.5] capitalize">
               {isExpanded ? product.name : truncatedName}
-              {!isExpanded && product.name.split(' ').length > 20 && (
+              {!isExpanded && product.name.length > 70 && (
                 <>
-                  ...{' '}
+                  {' '}
                   <span
                     onClick={() => setIsExpanded(true)}
                     className="text-blue-500 cursor-pointer"

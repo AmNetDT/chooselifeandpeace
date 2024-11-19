@@ -82,6 +82,12 @@ const config = withUt({
           '4': 'hsl(var(--chart-4))',
           '5': 'hsl(var(--chart-5))',
         },
+        sectionLayout: {
+          100: '#d1c8e0',
+          200: '#8f83a3',
+          300: '#6b5e82',
+          400: '#271c38',
+        },
       },
       borderRadius: {
         // Remove or set radius to 0

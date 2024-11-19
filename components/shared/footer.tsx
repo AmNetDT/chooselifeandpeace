@@ -142,7 +142,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
-                      href="/refund-policy/"
+                      href="/faq/"
                       className="block text-base sm:text-lg md:text-xl text-body-color dark:text-body-color-dark duration-300 hover:text-gray-500 dark:text-body-color-dark"
                     >
                       FAQs
@@ -150,10 +150,10 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
-                      href="/refund-policy/"
+                      href="/personal-journey-of-faith/"
                       className="block text-base sm:text-lg md:text-xl text-body-color dark:text-body-color-dark duration-300 hover:text-gray-500 dark:text-body-color-dark"
                     >
-                      Bible
+                      Personal Journey of Faith
                     </a>
                   </li>
                 </ul>
@@ -174,7 +174,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
-                      href="/about/"
+                      href="/customer-support/"
                       className="block text-base sm:text-lg md:text-xl text-body-color dark:text-body-color-dark duration-300 hover:text-gray-500 dark:text-body-color-dark"
                     >
                       Contact Support
@@ -182,10 +182,10 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
-                      href="/refund-policy/"
+                      href="/return-policy/"
                       className="block text-base sm:text-lg md:text-xl text-body-color dark:text-body-color-dark duration-300 hover:text-gray-500 dark:text-body-color-dark"
                     >
-                      Refund Policy
+                      Return Policy
                     </a>
                   </li>
                 </ul>
