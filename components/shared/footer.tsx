@@ -164,14 +164,14 @@ const Footer = () => {
             <div className="w-1/2 sm:w-1/2 md:w-1/3 lg:w-2/12 xl:w-2/12 px-4">
               <div className="mb-8 lg:mb-16">
                 <ul className="space-y-4">
-                  <li>
+                  {/* <li>
                     <a
                       href="/about/"
                       className="block text-base sm:text-lg md:text-xl text-body-color dark:text-body-color-dark duration-300 hover:text-gray-500 dark:text-body-color-dark"
                     >
                       Delivery
                     </a>
-                  </li>
+                  </li> */}
                   <li>
                     <a
                       href="/customer-support/"
@@ -198,10 +198,10 @@ const Footer = () => {
                 <ul className="space-y-4">
                   <li>
                     <a
-                      href="/terms-of-use/"
+                      href="/terms-and-conditions/"
                       className="block text-base sm:text-lg md:text-xl text-body-color dark:text-body-color-dark duration-300 hover:text-gray-500 dark:text-body-color-dark"
                     >
-                      Terms of Use
+                      Terms of Conditions
                     </a>
                   </li>
                   <li>
