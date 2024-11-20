@@ -44,16 +44,15 @@ const Carousel = React.forwardRef<
     },
     ref
   ) => {
-    // Check if opts is defined and correctly structure it
     const carouselOptions = React.useMemo(() => {
       return {
         ...opts,
-        axis: orientation === 'horizontal' ? 'x' : 'y', // Explicitly set 'x' or 'y'
-        loop: true, // Enabling loop for continuous scroll
+        axis: orientation === 'horizontal' ? 'x' : 'y',
+        loop: true,
       }
     }, [opts, orientation])
 
-    const [carouselRef, api] = useEmblaCarousel(carouselOptions as any, plugins) // Use 'as any' to override the type mismatch
+    const [carouselRef, api] = useEmblaCarousel(carouselOptions as any, plugins)
     const [canScrollPrev, setCanScrollPrev] = React.useState(false)
     const [canScrollNext, setCanScrollNext] = React.useState(false)
 
@@ -134,7 +133,7 @@ const CarouselItem = React.forwardRef<
       role="group"
       aria-roledescription="slide"
       className={cn(
-        'min-w-[250px] md:min-w-[350px] lg:min-w-[500px] shrink-0 grow-0',
+        'min-w-[250px] sm:min-w-[300px] md:min-w-[350px] lg:min-w-[500px] shrink-0 grow-0',
         orientation === 'horizontal' ? 'pl-4' : 'pt-4',
         className
       )}
@@ -155,7 +154,7 @@ const CarouselPrevious = React.forwardRef<
       variant={variant}
       size={size}
       className={cn(
-        'absolute h-6 w-6 sm:h-8 sm:w-8 md:h-10 md:w-10 rounded-full',
+        'hidden md:flex absolute h-6 w-6 sm:h-8 sm:w-8 md:h-10 md:w-10 rounded-full',
         orientation === 'horizontal'
           ? '-left-8 sm:-left-12 top-1/2 -translate-y-1/2'
           : '-top-8 sm:-top-12 left-1/2 -translate-x-1/2 rotate-90',
@@ -183,7 +182,7 @@ const CarouselNext = React.forwardRef<
       variant={variant}
       size={size}
       className={cn(
-        'absolute h-6 w-6 sm:h-8 sm:w-8 md:h-10 md:w-10 rounded-full',
+        'hidden md:flex absolute h-6 w-6 sm:h-8 sm:w-8 md:h-10 md:w-10 rounded-full',
         orientation === 'horizontal'
           ? '-right-8 sm:-right-12 top-1/2 -translate-y-1/2'
           : '-bottom-8 sm:-bottom-12 left-1/2 -translate-x-1/2 rotate-90',

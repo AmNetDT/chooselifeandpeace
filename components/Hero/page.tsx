@@ -14,10 +14,10 @@ const Hero = () => {
                 className="wow fadeInUp mx-auto max-w-[800px] text-center"
                 data-wow-delay=".2s"
               >
-                <h1 className="mb-5 text-3xl font-bold leading-tight text-gray-400 dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
+                <h1 className="mb-5 text-3xl font-bold leading-tight text-gray-600 dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
                   A Divine Calling to Inspire, Uplift, and Transform Lives
                 </h1>
-                <p className="dark:text-body-color-dark mb-12 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl">
+                <p className="text-xl sm:text-3xl text-center pt-2 pb-8 sm:py-6">
                   Founded by Sophia E. Aigbodion, ChooseLifeandPeace.com is not
                   just a brand, but the embodiment of a divine calling that
                   began in 2023.

@@ -14,16 +14,16 @@ const Faq = () => {
           <h1 className="text-2xl sm:text-4xl text-center pb-6 sm:pb-10">
             Frequently Asked Questions (FAQ)
           </h1>
-          <p className="text-base sm:text-lg font-bold tracking-widest leading-normal text-center">
+          <h1 className="text-xl sm:text-3xl text-center py-2 sm:py-6">
             Welcome to the ChooseLifeandPeace FAQ page! Below are answers to
             some of the most common questions.
-          </p>
+          </h1>
           <p className="text-base sm:text-lg font-bold tracking-widest leading-normal text-center pt-6">
             If you can’t find what you’re looking for, feel free to contact us.
           </p>
 
-          <div className="grid grid-cols-6 gap-4 my-12 border border-indigo-600 ... p-10">
-            <div className="col-start-1 col-end-7 ...">
+          <div className="grid grid-cols-6 gap-4 my-12 border border-indigo-600 ... py-10 px-4">
+            <div className="col-start-1 col-end-7 ... text-center">
               <h1 className="text-xl sm:text-3xl text-center py-2 sm:py-6">
                 1. How do I place an order?
               </h1>
@@ -35,8 +35,8 @@ const Faq = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-6 gap-4 my-12 border border-indigo-600 ... p-10">
-            <div className="col-start-1 col-end-7 ...  text-center">
+          <div className="grid grid-cols-6 gap-4 my-12 border border-indigo-600 ... py-10 px-4">
+            <div className="col-start-1 col-end-7 ... text-center">
               <h1 className="text-xl sm:text-3xl text-center py-2 sm:py-6">
                 2. What payment methods do you accept?
               </h1>
@@ -48,21 +48,24 @@ const Faq = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-6 gap-4 my-12 border border-indigo-600 ... p-10">
-            <div className="col-start-1 col-end-7 ...">
+          <div className="grid grid-cols-6 gap-4 my-12 border border-indigo-600 ... py-10 px-4">
+            <div className="col-start-1 col-end-7 ... text-center">
               <h1 className="text-xl sm:text-3xl text-center py-2 sm:py-6">
                 3. Can I track my order?
               </h1>
               <p className="text-base sm:text-lg font-bold tracking-widest leading-normal text-center pt-6">
-                Yes, once your order is shipped, you`&apos;`ll receive a
-                tracking number via email. Use this number to track your package
-                on our (tracking page or courier`&apos;`s website).
+                Yes, once your order is shipped, you&apos;ll receive a tracking
+                number via email.
+              </p>
+              <p className="text-base sm:text-lg font-bold tracking-widest leading-normal text-center pt-6">
+                Use this number to track your package on our (tracking page or
+                courier&apos;s website).
               </p>
             </div>
           </div>
 
-          <div className="grid grid-cols-6 gap-4 my-12 border border-indigo-600 ... p-10">
-            <div className="col-start-1 col-end-7 ...">
+          <div className="grid grid-cols-6 gap-4 my-12 border border-indigo-600 ... py-10 px-4">
+            <div className="col-start-1 col-end-7 ... text-center">
               <h1 className="text-xl sm:text-3xl text-center py-2 sm:py-6">
                 4. What is your return policy?
               </h1>
@@ -73,21 +76,22 @@ const Faq = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-6 gap-4 my-12 border border-indigo-600 ... p-10">
-            <div className="col-start-1 col-end-7 ...">
+          <div className="grid grid-cols-6 gap-4 my-12 border border-indigo-600 ... py-10 px-4">
+            <div className="col-start-1 col-end-7 ... text-center">
               <h1 className="text-xl sm:text-3xl text-center py-2 sm:py-6">
                 5. How do I return or exchange an item?
               </h1>
-              <p className="text-base sm:text-lg font-bold tracking-widest leading-normal text-center pt-6">
+              <p className="text-sm:text-lg font-bold tracking-widest leading-normal text-center pt-6">
                 To initiate a return or exchange, please contact our customer
-                support team at support@chooselifeandpeace.com with your order
-                number and reason for the return.
+                support team at
               </p>
+              <li>support@chooselifeandpeace.com</li>
+              <p> with your order number and reason for the return.</p>
             </div>
           </div>
 
-          <div className="grid grid-cols-6 gap-4 my-12 border border-indigo-600 ... p-10">
-            <div className="col-start-1 col-end-7 ...">
+          <div className="grid grid-cols-6 gap-4 my-12 border border-indigo-600 ... py-10 px-4">
+            <div className="col-start-1 col-end-7 ... text-center">
               <h1 className="text-xl sm:text-3xl text-center py-2 sm:py-6">
                 6. How long does shipping take?
               </h1>
@@ -102,7 +106,7 @@ const Faq = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-6 gap-4 my-12 border border-indigo-600 ... p-10">
+          <div className="grid grid-cols-6 gap-4 my-12 border border-indigo-600 ... py-10 px-4">
             <div className="col-start-1 col-end-7 ...">
               <h1 className="text-xl sm:text-3xl text-center py-2 sm:py-6">
                 7. Do you offer international shipping?
@@ -115,15 +119,17 @@ const Faq = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-6 gap-4 my-12 border border-indigo-600 ... p-10">
+          <div className="grid grid-cols-6 gap-4 my-12 border border-indigo-600 ... py-10 px-4">
             <div className="col-start-1 col-end-7 ...">
               <h1 className="text-xl sm:text-3xl text-center py-2 sm:py-6">
                 8. What should I do if I receive a damaged or defective item?
               </h1>
               <p className="text-base sm:text-lg font-bold tracking-widest leading-normal text-center pt-6">
                 If your item arrives damaged or defective, please contact us
-                immediately at support@chooselifeandpeace.com.{' '}
+                immediately at{' '}
               </p>
+              <li className="text-center">support@chooselifeandpeace.com</li>
+              <p></p>
               <p className="text-base sm:text-lg font-bold tracking-widest leading-normal text-center pt-6">
                 Include photos of the damaged item, and we’ll resolve the issue
                 promptly.
@@ -131,7 +137,7 @@ const Faq = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-6 gap-4 my-12 border border-indigo-600 ... p-10">
+          <div className="grid grid-cols-6 gap-4 my-12 border border-indigo-600 ... py-10 px-4">
             <div className="col-start-1 col-end-7 ...">
               <h1 className="text-xl sm:text-3xl text-center py-2 sm:py-6">
                 9. Can I change or cancel my order?
@@ -144,7 +150,7 @@ const Faq = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-6 gap-4 my-12 border border-indigo-600 ... p-10">
+          <div className="grid grid-cols-6 gap-4 my-12 border border-indigo-600 ... py-10 px-4">
             <div className="col-start-1 col-end-7 ... text-center">
               <h1 className="text-xl sm:text-3xl text-center py-2 sm:py-6">
                 10. How can I contact customer support?

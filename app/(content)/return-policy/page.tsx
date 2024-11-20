@@ -14,7 +14,7 @@ const ReturnPolicy = () => {
           <h1 className="text-2xl md:text-4xl text-center pb-6 md:pb-10">
             Return Policy for ChooseLifeandPeace Online Shop
           </h1>
-          <p className="text-base md:text-lg font-bold tracking-widest leading-normal text-left">
+          <p className="text-base sm:text-lg tracking-widest leading-normal pt-6">
             At Choose Life and Peace, we are committed to ensuring your
             satisfaction with every purchase. If you are not completely
             satisfied with your order, we gladly accept returns under the
@@ -57,17 +57,10 @@ const ReturnPolicy = () => {
               on non-returnable items for details.
             </li>
           </ol>
-          <p className="text-base leading-normal">
+          <p className="text-base sm:text-lg tracking-widest leading-normal pt-6">
             If you have any questions about our return policy or need further
             assistance, our team at ChooseLifeandPeace is here to help! Email us
-            at{' '}
-            <a
-              href="mailto:support@chooselifeandpeace.com"
-              className="underline"
-            >
-              support@chooselifeandpeace.com
-            </a>
-            .
+            at support@chooselifeandpeace.com
           </p>
         </div>
       </div>
