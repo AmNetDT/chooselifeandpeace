@@ -19,7 +19,7 @@ export default async function UpdateProductPage({
   if (!product) notFound()
   return (
     <div className="space-y-8 max-w-5xl mx-auto">
-      <h1 className="h2-bold">Update Product</h1>
+      <h1 className="h2-bold text-white">Update Product</h1>
       <ProductForm type="Update" product={product} productId={product.id} />
     </div>
   )
