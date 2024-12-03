@@ -19,7 +19,7 @@ export default function ProductCarousel({ data }: { data: Product[] }) {
       }}
       plugins={[
         Autoplay({
-          delay: 2000,
+          delay: 1000,
           stopOnInteraction: true,
           stopOnMouseEnter: true,
         }),
@@ -29,20 +29,15 @@ export default function ProductCarousel({ data }: { data: Product[] }) {
         {data.map((product: Product) => (
           <CarouselItem key={product.id}>
             <Link href={`/product/${product.slug}`}>
-              <div className="relative mx-auto  ">
+              <div className="relative mx-auto">
                 <Image
                   alt={product.name}
                   src={product.banner!}
                   width="0"
                   height="0"
                   sizes="100vw"
-                  className="w-full h-auto"
+                  className="w-full object-cover h-150"
                 />
-                <div className="absolute inset-0 flex items-end justify-center">
-                  <h2 className="bg-gray-900 bg-opacity-50 text-2xl font-bold px-2 text-white  ">
-                    {product.name}
-                  </h2>
-                </div>
               </div>
             </Link>
           </CarouselItem>

@@ -11,8 +11,8 @@ export default async function CartButton() {
     <Button
       asChild
       variant="ghost"
-      className="hover:bg-transparent" // Disable hover effect
-      style={{ color: '#ffffff', padding: '25px', fontSize: '1.0rem' }}
+      className="text-white hover:text-gray-300 hover:bg-gray-500 ml-3" // Disable hover effect
+      style={{ color: '#ffffff', fontSize: '1.0rem' }}
     >
       <Link href="/cart">
         <ShoppingCart className="mr-1" />

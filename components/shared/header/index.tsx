@@ -15,6 +15,7 @@ import { Button } from '@/components/ui/button'
 import { MenuIcon, ShoppingCartIcon } from 'lucide-react' // Import Cart Icon
 import { getAllCategories } from '@/lib/actions/product.actions'
 import Search from './search'
+import UserButtonMobile from './user-button-mobile'
 
 const Header = async () => {
   const categories = await getAllCategories()
@@ -65,9 +66,15 @@ const Header = async () => {
                   </Button>
                 </DrawerTrigger>
 
-                <DrawerContent className="h-full max-w-sm">
+                <DrawerContent className="h-full max-w-sm sm:m-0 sm:p-0">
                   <DrawerHeader>
-                    <DrawerTitle>Select a category</DrawerTitle>
+                    {/* UserButton - Visible only on small screens */}
+                    <div className="block sm:hidden w-full px-6 mx-0 mb-11">
+                      <UserButtonMobile />
+                    </div>
+                    <DrawerTitle className="text-left ml-4">
+                      Select a category
+                    </DrawerTitle>
                     <div className="space-y-1">
                       {categories.map((category) => (
                         <Button

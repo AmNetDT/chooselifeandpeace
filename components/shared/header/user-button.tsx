@@ -32,7 +32,7 @@ export default async function UserButton() {
           <div className="flex items-center">
             <Button
               variant="ghost"
-              className="relative w-8 h-8 rounded-full ml-2 text-white hover:text-black p-6"
+              className="relative ml-2 text-white hover:text-gray-300 hover:bg-gray-500"
             >
               {session.user.name}
             </Button>

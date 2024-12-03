@@ -7,6 +7,7 @@ import { revalidatePath } from 'next/cache'
 import { formatError } from '../utils'
 import { z } from 'zod'
 import { insertProductSchema, updateProductSchema } from '../validator'
+
 // CREATE
 export async function createProduct(data: z.infer<typeof insertProductSchema>) {
   try {
@@ -21,6 +22,7 @@ export async function createProduct(data: z.infer<typeof insertProductSchema>) {
     return { success: false, message: formatError(error) }
   }
 }
+
 // UPDATE
 export async function updateProduct(data: z.infer<typeof updateProductSchema>) {
   try {
@@ -39,6 +41,7 @@ export async function updateProduct(data: z.infer<typeof updateProductSchema>) {
     return { success: false, message: formatError(error) }
   }
 }
+
 // GET
 export async function getProductById(productId: string) {
   return await db.query.products.findFirst({

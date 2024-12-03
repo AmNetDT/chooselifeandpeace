@@ -16,25 +16,6 @@ import { PaymentResult } from '@/types'
 import { PAGE_SIZE } from '../constants'
 
 // GET
-export async function getAllOrders({
-  limit = PAGE_SIZE,
-  page,
-}: {
-  limit?: number
-  page: number
-}) {
-  const data = await db.query.orders.findMany({
-    orderBy: [desc(products.createdAt)],
-    limit,
-    offset: (page - 1) * limit,
-    with: { user: { columns: { name: true } } },
-  })
-  const dataCount = await db.select({ count: count() }).from(orders)
-  return {
-    data,
-    totalPages: Math.ceil(dataCount[0].count / limit),
-  }
-}
 
 export async function getOrderById(orderId: string) {
   return await db.query.orders.findFirst({
@@ -101,6 +82,26 @@ export async function getOrderSummary() {
     ordersPrice,
     salesData,
     latestOrders,
+  }
+}
+
+export async function getAllOrders({
+  limit = PAGE_SIZE,
+  page,
+}: {
+  limit?: number
+  page: number
+}) {
+  const data = await db.query.orders.findMany({
+    orderBy: [desc(products.createdAt)],
+    limit,
+    offset: (page - 1) * limit,
+    with: { user: { columns: { name: true } } },
+  })
+  const dataCount = await db.select({ count: count() }).from(orders)
+  return {
+    data,
+    totalPages: Math.ceil(dataCount[0].count / limit),
   }
 }
 
