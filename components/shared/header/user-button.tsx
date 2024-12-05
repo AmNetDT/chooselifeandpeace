@@ -9,6 +9,14 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
 import { SignOut } from '@/lib/actions/user.actions'
+import {
+  CircleUserRound,
+  LogOut,
+  Logs,
+  MailCheck,
+  Shield,
+  UserRound,
+} from 'lucide-react'
 
 export default async function UserButton() {
   const session = await auth()
@@ -16,11 +24,11 @@ export default async function UserButton() {
     return (
       <Link href="/api/auth/signin">
         <Button
-          style={{
-            padding: '25px',
-            fontSize: '1.0rem', // Corrected font-size to fontSize in camelCase
-          }}
+          variant="ghost"
+          className="relative ml-0 text-white hover:text-gray-300 hover:bg-gray-500"
+          style={{ color: '#ffffff', fontSize: '1.0rem' }}
         >
+          <UserRound />
           Sign In
         </Button>
       </Link>
@@ -32,60 +40,78 @@ export default async function UserButton() {
           <div className="flex items-center">
             <Button
               variant="ghost"
-              className="relative ml-2 text-white hover:text-gray-300 hover:bg-gray-500"
+              className="relative ml-0 text-white hover:text-gray-300 hover:bg-gray-500"
+              style={{ color: '#ffffff', fontSize: '1.0rem' }}
             >
+              <UserRound />
               {session.user.name}
             </Button>
           </div>
         </DropdownMenuTrigger>
-        <DropdownMenuContent className="w-56" align="end" forceMount>
+        <DropdownMenuContent className="w-60" align="start" forceMount>
           <DropdownMenuLabel className="font-normal">
-            <div className="flex flex-col space-y-1">
-              <p className="text-sm font-medium leading-none">
-                {session.user.name}
-              </p>
-              <p className="text-xs leading-none text-muted-foreground">
-                {session.user.email}
-              </p>
-            </div>
+            <Link href="/user/profile">
+              <Button
+                variant="ghost"
+                className="w-full text-black hover:text-black"
+                style={{ color: '#555555', fontSize: '1.0rem' }}
+              >
+                <MailCheck />
+                &nbsp; {session.user.email}
+              </Button>
+            </Link>
           </DropdownMenuLabel>
 
           <DropdownMenuItem>
-            <Link
-              className="w-full text-black hover:text-black"
-              href="/user/profile"
-            >
-              Profile
+            <Link href="/user/profile">
+              <Button
+                variant="ghost"
+                className="w-full text-black hover:text-black"
+                style={{ color: '#555555', fontSize: '1.0rem' }}
+              >
+                <CircleUserRound />
+                &nbsp;Profile
+              </Button>
             </Link>
           </DropdownMenuItem>
 
           <DropdownMenuItem>
-            <Link
-              className="w-full text-black hover:text-black"
-              href="/user/orders"
-            >
-              Order History
+            <Link href="/user/orders">
+              <Button
+                variant="ghost"
+                className="w-full text-black hover:text-black"
+                style={{ color: '#555555', fontSize: '1.0rem' }}
+              >
+                <Logs />
+                &nbsp;Order History
+              </Button>
             </Link>
           </DropdownMenuItem>
 
           {session.user.role === 'admin' && (
             <DropdownMenuItem>
-              <Link
-                className="w-full text-black hover:text-black"
-                href="/admin/overview"
-              >
-                Admin
+              <Link href="/admin/overview">
+                <Button
+                  variant="ghost"
+                  className="w-full text-black hover:text-black"
+                  style={{ color: '#555555', fontSize: '1.0rem' }}
+                >
+                  <Shield />
+                  &nbsp;Admin
+                </Button>
               </Link>
             </DropdownMenuItem>
           )}
 
-          <DropdownMenuItem className="p-0 mb-1">
+          <DropdownMenuItem className="p-0 mb-1 bg-gray-600">
             <form action={SignOut} className="w-full">
               <Button
                 className="w-full py-4 px-2 h-4 justify-start text-black hover:text-black"
+                style={{ color: '#ffffff', fontSize: '1.0rem' }}
                 variant="ghost"
               >
-                Sign Out
+                <LogOut />
+                &nbsp;Sign Out
               </Button>
             </form>
           </DropdownMenuItem>

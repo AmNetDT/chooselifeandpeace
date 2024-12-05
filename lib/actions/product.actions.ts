@@ -3,16 +3,20 @@ import db from '@/db/drizzle'
 import { products } from '@/db/schema'
 import { and, count, eq, ilike, sql } from 'drizzle-orm/sql'
 import { PAGE_SIZE } from '../constants'
-import { revalidatePath } from 'next/cache'
-import { formatError } from '../utils'
 import { z } from 'zod'
 import { insertProductSchema, updateProductSchema } from '../validator'
+import { revalidatePath } from 'next/cache'
+import { formatError } from '../utils'
 
 // CREATE
-export async function createProduct(data: z.infer<typeof insertProductSchema>) {
+export async function createProduct(
+  data: z.infer<typeof insertProductSchema>
+): Promise<{ success: boolean; message: string }> {
   try {
+    // Replace with actual implementation logic
     const product = insertProductSchema.parse(data)
     await db.insert(products).values(product)
+
     revalidatePath('/admin/products')
     return {
       success: true,
@@ -24,8 +28,11 @@ export async function createProduct(data: z.infer<typeof insertProductSchema>) {
 }
 
 // UPDATE
-export async function updateProduct(data: z.infer<typeof updateProductSchema>) {
+export async function updateProduct(
+  data: z.infer<typeof updateProductSchema> & { id: string }
+): Promise<{ success: boolean; message: string }> {
   try {
+    // Replace with actual implementation logic
     const product = updateProductSchema.parse(data)
     const productExists = await db.query.products.findFirst({
       where: eq(products.id, product.id),
@@ -104,8 +111,6 @@ export async function getAllProducts({
     rating && rating !== 'all'
       ? sql`${products.rating} >= ${rating}`
       : undefined
-
-  // 100-200
   const priceFilter =
     price && price !== 'all'
       ? sql`${products.price} >= ${price.split('-')[0]} AND ${
@@ -128,32 +133,12 @@ export async function getAllProducts({
     .orderBy(order)
     .offset((page - 1) * limit)
     .limit(limit)
-
   const dataCount = await db
     .select({ count: count() })
     .from(products)
     .where(condition)
-
   return {
     data,
     totalPages: Math.ceil(dataCount[0].count / limit),
-  }
-}
-
-// DELETE
-export async function deleteProduct(id: string) {
-  try {
-    const productExists = await db.query.products.findFirst({
-      where: eq(products.id, id),
-    })
-    if (!productExists) throw new Error('Product not found')
-    await db.delete(products).where(eq(products.id, id))
-    revalidatePath('/admin/products')
-    return {
-      success: true,
-      message: 'Product deleted successfully',
-    }
-  } catch (error) {
-    return { success: false, message: formatError(error) }
   }
 }

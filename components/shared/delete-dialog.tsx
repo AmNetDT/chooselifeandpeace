@@ -1,3 +1,4 @@
+// components/shared/delete-dialog.tsx
 'use client'
 
 import { useState, useTransition } from 'react'
@@ -14,28 +15,40 @@ import {
 import { Button } from '../ui/button'
 import { useToast } from '@/hooks/use-toast'
 
-export default function DeleteDialog({ id }: { id: string }) {
+type DeleteDialogProps = {
+  id: string
+  action: (id: string) => Promise<{ success: boolean; message: string }>
+}
+
+export default function DeleteDialog({ id, action }: DeleteDialogProps) {
   const [open, setOpen] = useState(false)
   const [isPending, startTransition] = useTransition()
   const { toast } = useToast()
 
-  const deleteProduct = async (productId: string) => {
-    try {
-      const response = await fetch(`/api/products/delete`, {
-        method: 'DELETE',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ id: productId }),
+  // Explicitly using id in the function
+  const handleDelete = async () => {
+    if (!id) {
+      toast({
+        variant: 'destructive',
+        description: 'Product ID is missing',
       })
-      const result = await response.json()
-
-      if (!response.ok) {
-        throw new Error(result.message || 'Failed to delete product')
-      }
-
-      return { success: true, message: 'Product deleted successfully' }
-    } catch (error: any) {
-      return { success: false, message: error.message || 'An error occurred' }
+      return
     }
+
+    startTransition(async () => {
+      const res = await action(id) // Using id here
+      if (!res.success) {
+        toast({
+          variant: 'destructive',
+          description: res.message,
+        })
+      } else {
+        setOpen(false)
+        toast({
+          description: res.message,
+        })
+      }
+    })
   }
 
   return (
@@ -48,7 +61,7 @@ export default function DeleteDialog({ id }: { id: string }) {
       <AlertDialogContent>
         <AlertDialogHeader>
           <AlertDialogTitle>
-            Are you sure you want to delete the item?
+            Are you sure you want to delete this product?
           </AlertDialogTitle>
           <AlertDialogDescription>
             This action cannot be undone.
@@ -60,22 +73,7 @@ export default function DeleteDialog({ id }: { id: string }) {
             variant="destructive"
             size="sm"
             disabled={isPending}
-            onClick={() =>
-              startTransition(async () => {
-                const res = await deleteProduct(id)
-                if (!res.success) {
-                  toast({
-                    variant: 'destructive',
-                    description: res.message,
-                  })
-                } else {
-                  setOpen(false)
-                  toast({
-                    description: res.message,
-                  })
-                }
-              })
-            }
+            onClick={handleDelete} // id used here
           >
             {isPending ? 'Deleting...' : 'Delete'}
           </Button>

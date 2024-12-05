@@ -10,6 +10,7 @@ import {
   TableRow,
 } from '@/components/ui/table'
 import { getAllProducts } from '@/lib/actions/product.actions'
+import { deleteProduct } from '@/lib/actions/product.delete'
 import { APP_NAME } from '@/lib/constants'
 import { formatCurrency, formatId } from '@/lib/utils'
 import { Metadata } from 'next'
@@ -77,7 +78,7 @@ export default async function AdminProductsPage({
                     <Button asChild variant="outline" size="sm">
                       <Link href={`/admin/products/${product.id}`}>Edit</Link>
                     </Button>
-                    <DeleteDialog id={product.id} />
+                    <DeleteDialog id={product.id} action={deleteProduct} />
                   </TableCell>
                 </TableRow>
               ))}

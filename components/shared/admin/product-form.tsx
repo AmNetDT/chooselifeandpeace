@@ -24,6 +24,7 @@ import { Checkbox } from '@/components/ui/checkbox'
 import { Textarea } from '@/components/ui/textarea'
 import { Button } from '@/components/ui/button'
 import { useToast } from '@/hooks/use-toast'
+
 export default function ProductForm({
   type,
   product,
@@ -34,6 +35,7 @@ export default function ProductForm({
   productId?: string
 }) {
   const router = useRouter()
+
   const form = useForm<z.infer<typeof insertProductSchema>>({
     resolver:
       type === 'Update'
@@ -43,13 +45,14 @@ export default function ProductForm({
       product && type === 'Update' ? product : productDefaultValues,
   })
   const { toast } = useToast()
+
   async function onSubmit(values: z.infer<typeof insertProductSchema>) {
     if (type === 'Create') {
       const res = await createProduct(values)
       if (!res.success) {
         toast({
           variant: 'destructive',
-          description: res.message,
+          description: res.message, // No error here
         })
       } else {
         toast({
@@ -67,20 +70,24 @@ export default function ProductForm({
       if (!res.success) {
         toast({
           variant: 'destructive',
-          description: res.message,
+          description: res.message, // No error here
         })
       } else {
+        toast({
+          description: res.message,
+        })
         router.push(`/admin/products`)
       }
     }
   }
+
   const images = form.watch('images')
   const isFeatured = form.watch('isFeatured')
   const banner = form.watch('banner')
   return (
-    <div className="px-40 py-20 bg-gray-200 shadow-sm rounded-lg border border-gray-400">
-      <div className="overflow-x-auto">
-        <Form {...form}>
+    <Form {...form}>
+      <div className="px-40 py-20 bg-gray-200 shadow-sm rounded-lg border border-gray-400">
+        <div className="overflow-x-auto">
           <form
             method="post"
             onSubmit={form.handleSubmit(onSubmit)}
@@ -327,8 +334,8 @@ export default function ProductForm({
               </Button>
             </div>
           </form>
-        </Form>
+        </div>
       </div>
-    </div>
+    </Form>
   )
 }
