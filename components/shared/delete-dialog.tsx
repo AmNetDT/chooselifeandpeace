@@ -54,7 +54,7 @@ export default function DeleteDialog({ id, action }: DeleteDialogProps) {
   return (
     <AlertDialog open={open} onOpenChange={setOpen}>
       <AlertDialogTrigger asChild>
-        <Button size="sm" variant="outline">
+        <Button size="sm" variant="outline" className="hover:bg-gray-500">
           Delete
         </Button>
       </AlertDialogTrigger>

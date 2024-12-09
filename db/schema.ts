@@ -204,3 +204,5 @@ export const orderItemsRelations = relations(orderItems, ({ one }) => ({
     references: [orders.id],
   }),
 }))
+
+// npx drizzle-kit studio

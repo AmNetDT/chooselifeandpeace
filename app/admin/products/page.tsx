@@ -40,7 +40,7 @@ export default async function AdminProductsPage({
   return (
     <div className="space-y-2">
       <div className="flex-between">
-        <h1 className="h2-bold text-white my-4">Products</h1>
+        <h1 className="text-2xl font-semibold text-gray-300 my-4">Products</h1>
         <Button
           asChild
           variant="default"
@@ -76,7 +76,12 @@ export default async function AdminProductsPage({
                   <TableCell>{product.rating}</TableCell>
                   <TableCell className="flex gap-1">
                     <Button asChild variant="outline" size="sm">
-                      <Link href={`/admin/products/${product.id}`}>Edit</Link>
+                      <Link
+                        href={`/admin/products/${product.id}`}
+                        className="hover:bg-gray-500"
+                      >
+                        Edit
+                      </Link>
                     </Button>
                     <DeleteDialog id={product.id} action={deleteProduct} />
                   </TableCell>

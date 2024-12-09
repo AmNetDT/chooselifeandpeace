@@ -11,6 +11,7 @@ import {
 import { SignOut } from '@/lib/actions/user.actions'
 import {
   CircleUserRound,
+  LockKeyhole,
   LogOut,
   Logs,
   MailCheck,
@@ -53,7 +54,7 @@ export default async function UserButton() {
             <Link href="/user/profile">
               <Button
                 variant="ghost"
-                className="w-full text-black hover:text-black"
+                className="w-full ml-0 pl-0 text-black hover:text-black"
                 style={{ color: '#555555', fontSize: '1.0rem' }}
               >
                 <MailCheck />
@@ -70,7 +71,20 @@ export default async function UserButton() {
                 style={{ color: '#555555', fontSize: '1.0rem' }}
               >
                 <CircleUserRound />
-                &nbsp;Profile
+                &nbsp;My Account
+              </Button>
+            </Link>
+          </DropdownMenuItem>
+
+          <DropdownMenuItem>
+            <Link href="/user/change-password">
+              <Button
+                variant="ghost"
+                className="w-full text-black hover:text-black"
+                style={{ color: '#555555', fontSize: '1.0rem' }}
+              >
+                <LockKeyhole />
+                &nbsp;Change Password
               </Button>
             </Link>
           </DropdownMenuItem>
@@ -103,11 +117,11 @@ export default async function UserButton() {
             </DropdownMenuItem>
           )}
 
-          <DropdownMenuItem className="p-0 mb-1 bg-gray-600">
+          <DropdownMenuItem className="p-0 mb-1">
             <form action={SignOut} className="w-full">
               <Button
-                className="w-full py-4 px-2 h-4 justify-start text-black hover:text-black"
-                style={{ color: '#ffffff', fontSize: '1.0rem' }}
+                className="w-full py-4 pl-7 h-4 justify-start text-black hover:text-gray-600"
+                style={{ fontSize: '1.0rem' }}
                 variant="ghost"
               >
                 <LogOut />

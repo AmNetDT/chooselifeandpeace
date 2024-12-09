@@ -36,7 +36,13 @@ export default async function UserButtonMobile() {
             className="w-full text-black hover:text-black"
             href="/user/profile"
           >
-            Profile
+            My Account
+          </Link>
+          <Link
+            className="w-full text-black hover:text-black"
+            href="/user/change-password"
+          >
+            Change Password
           </Link>
           <Link
             className="w-full text-black hover:text-black"

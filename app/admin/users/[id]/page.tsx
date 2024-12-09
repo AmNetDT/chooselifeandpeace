@@ -27,7 +27,7 @@ export default async function UpdateUserPage({
   // Render the update user form
   return (
     <div className="container mx-auto max-w-lg space-y-8 py-8">
-      <h1 className="text-2xl font-semibold">Update User</h1>
+      <h1 className="text-2xl font-semibold text-gray-300 my-4">Update User</h1>
       <UpdateUserForm
         user={{
           ...user,

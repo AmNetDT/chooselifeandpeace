@@ -241,10 +241,12 @@ export default function ReviewList({
                   <Check className=" h-4 w-4" /> Verified Purchase
                 </div>
               </div>
-              <CardDescription>{review.description}</CardDescription>
+              <CardDescription className="text-black">
+                {review.description}
+              </CardDescription>
             </CardHeader>
             <CardContent>
-              <div className="flex space-x-4 text-sm text-muted-foreground">
+              <div className="flex space-x-4 text-sm text-black">
                 <Rating value={review.rating} />
                 <div className="flex items-center">
                   <User className="mr-1 h-3 w-3" />

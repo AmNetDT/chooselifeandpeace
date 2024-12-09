@@ -1,7 +1,9 @@
 export const APP_NAME =
   process.env.NEXT_PUBLIC_APP_NAME || 'Choose Life & Peace'
 export const APP_DESCRIPTION =
-  process.env.NEXT_PUBLIC_APP_DESCRIPTION || 'Fashion & Clothing'
+  process.env.NEXT_PUBLIC_APP_DESCRIPTION || 'King of kings'
+
+export const SENDER_EMAIL = process.env.SENDER_EMAIL || 'onboarding@resend.dev'
 
 export const PAGE_SIZE = Number(process.env.PAGE_SIZE) || 3
 

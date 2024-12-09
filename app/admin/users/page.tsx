@@ -38,42 +38,51 @@ export default async function AdminUser({
 
   return (
     <div className="space-y-2">
-      <h1 className="h2-bold">Users</h1>
-      <div>
-        <Table>
-          <TableHeader>
-            <TableRow>
-              <TableHead>ID</TableHead>
-              <TableHead>NAME</TableHead>
-              <TableHead>EMAIL</TableHead>
-              <TableHead>ROLE</TableHead>
-              <TableHead>ACTIONS</TableHead>
-            </TableRow>
-          </TableHeader>
-          <TableBody>
-            {users?.data.map((user) => (
-              <TableRow key={user.id}>
-                <TableCell>{formatId(user.id)}</TableCell>
-                <TableCell>{user.name}</TableCell>
-                <TableCell>{user.email}</TableCell>
-                <TableCell>{user.role}</TableCell>
-                <TableCell className="flex gap-1">
-                  <Button asChild variant="outline" size="sm">
-                    <Link href={`/admin/users/${user.id}`}>Edit</Link>
-                  </Button>
-                  <DeleteDialog id={user.id} action={deleteUser} />
-                </TableCell>
+      <h1 className="text-2xl font-semibold text-gray-300 my-4">
+        Users Manager
+      </h1>
+      <div className="p-4 bg-white shadow-sm rounded-lg border border-gray-400 hover:bg-gray-200">
+        <div className="overflow-x-auto">
+          <Table className="w-full text-gray-800">
+            <TableHeader>
+              <TableRow className="bg-gray-100">
+                <TableHead className="text-black">ID</TableHead>
+                <TableHead className="text-black">NAME</TableHead>
+                <TableHead className="text-black">EMAIL</TableHead>
+                <TableHead className="text-black">ROLE</TableHead>
+                <TableHead className="text-black">ACTIONS</TableHead>
               </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-        {users?.totalPages! > 1 && (
-          <Pagination page={page} totalPages={users?.totalPages!} />
-        )}
-      </div>
+            </TableHeader>
+            <TableBody>
+              {users?.data.map((user) => (
+                <TableRow key={user.id}>
+                  <TableCell>{formatId(user.id)}</TableCell>
+                  <TableCell>{user.name}</TableCell>
+                  <TableCell>{user.email}</TableCell>
+                  <TableCell>{user.role}</TableCell>
+                  <TableCell className="flex gap-1">
+                    <Button asChild variant="outline" size="sm">
+                      <Link
+                        href={`/admin/users/${user.id}`}
+                        className="hover:bg-gray-500"
+                      >
+                        Edit
+                      </Link>
+                    </Button>
+                    <DeleteDialog id={user.id} action={deleteUser} />
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+          {users?.totalPages! > 1 && (
+            <Pagination page={page} totalPages={users?.totalPages!} />
+          )}
+        </div>
 
-      {/* Render children */}
-      {children}
+        {/* Render children */}
+        {children}
+      </div>
     </div>
   )
 }

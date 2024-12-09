@@ -25,7 +25,7 @@ export default async function DashboardPage() {
   const summary = await getOrderSummary()
   return (
     <div className="space-y-4">
-      <h1 className="h2-bold text-white my-4">Dashboard</h1>
+      <h1 className="text-2xl font-semibold text-gray-300 my-4">Dashboard</h1>
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">

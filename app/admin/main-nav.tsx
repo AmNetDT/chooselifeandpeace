@@ -5,11 +5,10 @@ import { usePathname } from 'next/navigation'
 import React from 'react'
 
 const links = [
-  { title: 'Home', href: '/../Home' },
-  { title: 'Overview', href: '/admin/overview' },
-  { title: 'Products', href: '/admin/products' },
+  { title: 'Dashboard', href: '/admin/overview' },
+  { title: 'Products Manager', href: '/admin/products' },
   { title: 'Orders', href: '/admin/orders' },
-  { title: 'Users', href: '/admin/users' },
+  { title: 'Users Manager', href: '/admin/users' },
   { title: 'Settings', href: '/admin/settings' },
 ]
 

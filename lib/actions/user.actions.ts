@@ -205,3 +205,29 @@ export async function updateProfile(user: { name: string; email: string }) {
     return { success: false, message: formatError(error) }
   }
 }
+
+export async function updatePassword(user: {
+  password: string
+  email: string
+}) {
+  try {
+    const session = await auth()
+    const currentUser = await db.query.users.findFirst({
+      where: (users, { eq }) => eq(users.id, session?.user.id!),
+    })
+    if (!currentUser) throw new Error('User not found')
+    await db
+      .update(users)
+      .set({
+        password: user.password,
+      })
+      .where(eq(users.id, currentUser.id))
+
+    return {
+      success: true,
+      message: 'Password updated successfully',
+    }
+  } catch (error) {
+    return { success: false, message: formatError(error) }
+  }
+}
