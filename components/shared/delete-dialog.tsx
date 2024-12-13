@@ -15,12 +15,21 @@ import {
 import { Button } from '../ui/button'
 import { useToast } from '@/hooks/use-toast'
 
-type DeleteDialogProps = {
-  id: string
-  action: (id: string) => Promise<{ success: boolean; message: string }>
-}
+// // eslint-disable-next-line no-unused-vars
+// type DeleteDialogProps = {
+//   id: string
+//   action: (id: string) => Promise<{ success: boolean; message: string }>
+// }
 
-export default function DeleteDialog({ id, action }: DeleteDialogProps) {
+// eslint-disable-next-line no-unused-vars
+export default function DeleteDialog({
+  id,
+  action,
+}: {
+  id: string
+  // eslint-disable-next-line no-unused-vars
+  action: (id: string) => Promise<{ success: boolean; message: string }>
+}) {
   const [open, setOpen] = useState(false)
   const [isPending, startTransition] = useTransition()
   const { toast } = useToast()
@@ -55,7 +64,7 @@ export default function DeleteDialog({ id, action }: DeleteDialogProps) {
     <AlertDialog open={open} onOpenChange={setOpen}>
       <AlertDialogTrigger asChild>
         <Button size="sm" variant="outline" className="hover:bg-gray-500">
-          Delete
+          Delete (ID: {id})
         </Button>
       </AlertDialogTrigger>
       <AlertDialogContent>

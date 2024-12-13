@@ -11,30 +11,20 @@ import {
   TableRow,
 } from '@/components/ui/table'
 import { deleteUser, getAllUsers } from '@/lib/actions/user.actions'
-import { APP_NAME } from '@/lib/constants'
 import { formatId } from '@/lib/utils'
-import { Metadata } from 'next'
 import Link from 'next/link'
-import React from 'react'
-
-export const metadata: Metadata = {
-  title: `Admin Users - ${APP_NAME}`,
-}
 
 export default async function AdminUser({
   searchParams,
-  children,
 }: {
   searchParams: { page: string }
-  children: React.ReactNode
 }) {
   const session = await auth()
   if (session?.user.role !== 'admin')
-    throw new Error('admin permission required')
+    throw new Error('Admin permission required')
+
   const page = Number(searchParams.page) || 1
-  const users = await getAllUsers({
-    page,
-  })
+  const users = await getAllUsers({ page })
 
   return (
     <div className="space-y-2">
@@ -79,9 +69,6 @@ export default async function AdminUser({
             <Pagination page={page} totalPages={users?.totalPages!} />
           )}
         </div>
-
-        {/* Render children */}
-        {children}
       </div>
     </div>
   )

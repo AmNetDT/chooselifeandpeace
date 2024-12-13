@@ -19,6 +19,7 @@ import { count, desc, eq } from 'drizzle-orm'
 import { revalidatePath } from 'next/cache'
 import { z } from 'zod'
 import { PAGE_SIZE } from '../constants'
+import bcrypt from 'bcrypt'
 
 //User
 export async function signUp(prevState: unknown, formData: FormData) {
@@ -211,7 +212,44 @@ export async function updateProfile(user: { name: string; email: string }) {
     return { success: false, message: formatError(error) }
   }
 }
+// Verify Old Password
 
+// Type for the function parameters
+interface VerifyOldPasswordParams {
+  email: string
+  oldPassword: string
+}
+
+// Mock or real database query function
+export async function getUserByEmail(
+  email: string
+): Promise<{ password: string } | null> {
+  const user = await db.query.users.findFirst({
+    where: (users, { eq }) => eq(users.email, email),
+    columns: {
+      password: true,
+    },
+  })
+
+  if (!user || !user.password) return null // Ensure non-null password
+  return { password: user.password }
+}
+
+// Function to verify the old password
+export async function verifyOldPassword({
+  email,
+  oldPassword,
+}: VerifyOldPasswordParams): Promise<boolean> {
+  const user = await getUserByEmail(email)
+
+  if (!user) {
+    throw new Error('User not found')
+  }
+
+  return await bcrypt.compare(oldPassword, user.password)
+}
+
+//Update Password
 export async function updatePassword(user: {
   password: string
   email: string
