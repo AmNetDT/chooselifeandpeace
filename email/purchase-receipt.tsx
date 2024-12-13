@@ -15,7 +15,6 @@ import {
   Tailwind,
   Text,
 } from '@react-email/components'
-
 type OrderInformationProps = {
   order: Order
 }

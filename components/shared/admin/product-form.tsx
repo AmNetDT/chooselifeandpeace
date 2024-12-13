@@ -79,6 +79,7 @@ export default function ProductForm({
   const images = form.watch('images')
   const isFeatured = form.watch('isFeatured')
   const banner = form.watch('banner')
+
   return (
     <div className="space-y-8 max-w-5xl mx-auto p-10 bg-white shadow-sm">
       <Form {...form}>

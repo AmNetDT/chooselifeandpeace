@@ -10,8 +10,10 @@ import {
 import { Input } from '@/components/ui/input'
 import { useToast } from '@/hooks/use-toast'
 import { updatePassword } from '@/lib/actions/user.actions'
+import { signInDefaultValues } from '@/lib/constants'
 import { updatePasswordSchema } from '@/lib/validator'
 import { zodResolver } from '@hookform/resolvers/zod'
+import { hash } from 'bcrypt-ts-edge'
 import { useSession } from 'next-auth/react'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
@@ -27,22 +29,26 @@ const PasswordForm = () => {
   })
   const { toast } = useToast()
 
+  // Change Password
   async function onSubmit(values: z.infer<typeof updatePasswordSchema>) {
-    const res = await updatePassword(values)
+    const hashedPassword = await hash(values.password, 10)
+
+    const res = await updatePassword({ ...values, password: hashedPassword })
+
     if (!res.success)
       return toast({
         variant: 'destructive',
         description: res.message,
       })
 
-    const newSession = {
+    await update({
       ...session,
       user: {
         ...session?.user,
-        password: values.password,
+        password: hashedPassword,
       },
-    }
-    await update(newSession)
+    })
+
     toast({
       description: res.message,
     })
@@ -83,6 +89,7 @@ const PasswordForm = () => {
                     {...field}
                     className="input-field"
                     type="password"
+                    defaultValue={signInDefaultValues.password}
                   />
                 </FormControl>
                 <FormMessage />

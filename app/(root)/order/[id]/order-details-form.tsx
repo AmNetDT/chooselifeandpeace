@@ -16,7 +16,6 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table'
-import { useToast } from '@/hooks/use-toast'
 import { formatCurrency, formatDateTime, formatId } from '@/lib/utils'
 import { Order } from '@/types'
 import Image from 'next/image'
@@ -29,15 +28,19 @@ import {
 } from '@/lib/actions/order.actions'
 import { useTransition } from 'react'
 import { Button } from '@/components/ui/button'
+import { useToast } from '@/hooks/use-toast'
+import StripePayment from './stripe-payment'
 
 export default function OrderDetailsForm({
   order,
   paypalClientId,
   isAdmin,
+  stripeClientSecret,
 }: {
   order: Order
   paypalClientId: string
   isAdmin: boolean
+  stripeClientSecret: string | null
 }) {
   const {
     shippingAddress,
@@ -81,6 +84,7 @@ export default function OrderDetailsForm({
       variant: res.success ? 'default' : 'destructive',
     })
   }
+
   const MarkAsPaidButton = () => {
     const [isPending, startTransition] = useTransition()
     const { toast } = useToast()
@@ -102,6 +106,7 @@ export default function OrderDetailsForm({
       </Button>
     )
   }
+
   const MarkAsDeliveredButton = () => {
     const [isPending, startTransition] = useTransition()
     const { toast } = useToast()
@@ -126,7 +131,9 @@ export default function OrderDetailsForm({
 
   return (
     <>
-      <h1 className="py-4 text-2xl"> Order {formatId(order.id)}</h1>
+      <h1 className="py-4 text-2xl text-gray-600">
+        Order {formatId(order.id)}
+      </h1>
       <div className="grid md:grid-cols-3 md:gap-5">
         <div className="overflow-x-auto md:col-span-2 space-y-4">
           <Card>
@@ -232,6 +239,14 @@ export default function OrderDetailsForm({
                   </PayPalScriptProvider>
                 </div>
               )}
+              {!isPaid && paymentMethod === 'Stripe' && stripeClientSecret && (
+                <StripePayment
+                  priceInCents={Number(order.totalPrice) * 100}
+                  orderId={order.id}
+                  clientSecret={stripeClientSecret}
+                />
+              )}
+
               {isAdmin && !isPaid && paymentMethod === 'CashOnDelivery' && (
                 <MarkAsPaidButton />
               )}
