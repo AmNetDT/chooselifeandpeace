@@ -135,7 +135,7 @@ const Footer = () => {
                   <li>
                     <a
                       href="/about/"
-                      className="block text-base sm:text-lg md:text-xl text-body-color dark:text-body-color-dark duration-300 hover:text-gray-500 dark:text-body-color-dark"
+                      className="block text-gray-300 hover:text-gray-500"
                     >
                       About
                     </a>
@@ -143,7 +143,7 @@ const Footer = () => {
                   <li>
                     <a
                       href="/faq/"
-                      className="block text-base sm:text-lg md:text-xl text-body-color dark:text-body-color-dark duration-300 hover:text-gray-500 dark:text-body-color-dark"
+                      className="block text-gray-300 hover:text-gray-500"
                     >
                       FAQs
                     </a>
@@ -151,7 +151,7 @@ const Footer = () => {
                   <li>
                     <a
                       href="/personal-journey-of-faith/"
-                      className="block text-base sm:text-lg md:text-xl text-body-color dark:text-body-color-dark duration-300 hover:text-gray-500 dark:text-body-color-dark"
+                      className="block text-gray-300 hover:text-gray-500"
                     >
                       Personal Journey of Faith
                     </a>
@@ -175,7 +175,7 @@ const Footer = () => {
                   <li>
                     <a
                       href="/customer-support/"
-                      className="block text-base sm:text-lg md:text-xl text-body-color dark:text-body-color-dark duration-300 hover:text-gray-500 dark:text-body-color-dark"
+                      className="block text-gray-300 hover:text-gray-500"
                     >
                       Contact Support
                     </a>
@@ -183,7 +183,7 @@ const Footer = () => {
                   <li>
                     <a
                       href="/return-policy/"
-                      className="block text-base sm:text-lg md:text-xl text-body-color dark:text-body-color-dark duration-300 hover:text-gray-500 dark:text-body-color-dark"
+                      className="block text-gray-300 hover:text-gray-500"
                     >
                       Return Policy
                     </a>
@@ -199,7 +199,7 @@ const Footer = () => {
                   <li>
                     <a
                       href="/terms-and-conditions/"
-                      className="block text-base sm:text-lg md:text-xl text-body-color dark:text-body-color-dark duration-300 hover:text-gray-500 dark:text-body-color-dark"
+                      className="block text-gray-300 hover:text-gray-500"
                     >
                       Terms of Conditions
                     </a>
@@ -207,7 +207,7 @@ const Footer = () => {
                   <li>
                     <a
                       href="/privacy-policy/"
-                      className="block text-base sm:text-lg md:text-xl text-body-color dark:text-body-color-dark duration-300 hover:text-gray-500 dark:text-body-color-dark"
+                      className="block text-gray-300 hover:text-gray-500"
                     >
                       Privacy Policy
                     </a>

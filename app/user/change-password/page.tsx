@@ -19,7 +19,7 @@ export default async function PasswordPage() {
   return (
     <SessionProvider session={session}>
       <div className="max-w-md  mx-auto space-y-4">
-        <h1 className="text-2xl font-semibold text-gray-300 my-4">
+        <h1 className="text-2xl font-semibold text-gray-600 my-4">
           Change Password
         </h1>
         <PasswordForm />

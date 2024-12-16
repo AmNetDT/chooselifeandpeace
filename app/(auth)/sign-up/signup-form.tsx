@@ -9,6 +9,19 @@ import { Label } from '@/components/ui/label'
 import { signUp } from '@/lib/actions/user.actions'
 import { signUpDefaultValues } from '@/lib/constants'
 
+const SignUpButton = () => {
+  const { pending } = useFormStatus()
+  return (
+    <Button
+      disabled={pending}
+      className="w-full"
+      //variant="default"
+    >
+      {pending ? 'Submitting...' : 'Sign Up'}
+    </Button>
+  )
+}
+
 export default function SignUpForm() {
   const [data, action] = useFormState(signUp, {
     success: false,
@@ -17,27 +30,12 @@ export default function SignUpForm() {
   const searchParams = useSearchParams()
   const callbackUrl = searchParams.get('callbackUrl') || '/'
 
-  const SignUpButton = () => {
-    const { pending } = useFormStatus()
-    return (
-      <Button
-        disabled={pending}
-        className="w-full"
-        //variant="default"
-      >
-        {pending ? 'Submitting...' : 'Sign Up'}
-      </Button>
-    )
-  }
-
   return (
     <form action={action}>
       <input type="hidden" name="callbackUrl" value={callbackUrl} />
       <div className="space-y-6">
         <div>
-          <Label htmlFor="name" className="sm:text-lg md:text-xl">
-            Name
-          </Label>
+          <Label htmlFor="name">Name</Label>
           <Input
             id="name"
             name="name"
@@ -48,9 +46,7 @@ export default function SignUpForm() {
           />
         </div>
         <div>
-          <Label htmlFor="email" className="sm:text-lg md:text-xl">
-            Email
-          </Label>
+          <Label htmlFor="email">Email</Label>
           <Input
             id="email"
             name="email"
@@ -61,9 +57,7 @@ export default function SignUpForm() {
           />
         </div>
         <div>
-          <Label htmlFor="password" className="sm:text-lg md:text-xl">
-            Password
-          </Label>
+          <Label htmlFor="password">Password</Label>
           <Input
             id="password"
             name="password"
@@ -73,9 +67,7 @@ export default function SignUpForm() {
           />
         </div>
         <div>
-          <Label htmlFor="confirmPassword" className="sm:text-lg md:text-xl">
-            Confirm Password
-          </Label>
+          <Label htmlFor="confirmPassword">Confirm Password</Label>
           <Input
             id="confirmPassword"
             name="confirmPassword"
@@ -91,7 +83,7 @@ export default function SignUpForm() {
         {!data.success && (
           <div className="text-center text-destructive">{data.message}</div>
         )}
-        <div className="sm:text-lg md:text-xl">
+        <div>
           Already have an account?{' '}
           <Link
             target="_self"

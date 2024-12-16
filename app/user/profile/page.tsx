@@ -19,7 +19,7 @@ export default function ProfilePage() {
 
   return (
     <div className="max-w-md mx-auto space-y-4">
-      <h1 className="text-2xl font-semibold text-gray-300 my-4">Profile</h1>
+      <h1 className="text-2xl font-semibold text-gray-600 my-4">Profile</h1>
       <ProfileForm />
     </div>
   )
